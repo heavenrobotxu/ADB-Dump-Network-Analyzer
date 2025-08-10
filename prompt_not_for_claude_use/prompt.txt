@@ -1,0 +1,14 @@
+功能描述：
+1.请用kotlin + compose实现一个桌面应用工具
+2.这个工具可以实时执行adb shell dumpsys 和网络相关的命令，如adb shell dumpsys wifi / adb shell dumpsys network_stack，读取到输出后进行分析，并把一些重要的分析结果通过UI直观的呈现出来
+3.工具目前需要分多个Tab(请把Tab放在UI页面的左侧)，每个Tab表示一个adb shell dumpsys命令的执行，现在的版本是个初版，先实现三个Tab，分别是执行adb shell dumpsys wifi / adb shell dumpsys network_stack / adb shell dumpsys netstats的输出分析
+实现思路：
+1.我在工程的dump_sample目录放了几个文件帮助你实现对上述命令重要输出的分析提示，分别是netstats_dump.txt / network_stack_dump.txt / wifi_dump.txt，我在这个文件中添加了 #开头的注释解释一些dump输出的含义，这表示这些dump输出的很重要的信息，请基于高优先级实现我添加了注释的dump输出数据的分析和展示，展示方式请先自由处理，后续我会基于UI效果进行需求更新
+2.我没有添加 #注释的dump输出内容请从互联网查询信息并基于你对dump数据的理解作为低优先级的实现来呈现UI
+
+功能描述：
+再添加一个新的Tab，这个tab用来展示adb shell dumpsys connectivity的内容，我写了一个规则文件analyzation/connectivity_rule来帮助你理解其输出的含义，我用 #备注的内容是重点，需要以UI呈现出来
+
+功能描述：
+再添加一个新的Tab，这个tab用来展示两个命令的数据分析，分别是 adb shell ip route show & adb shell ip rule show， 其中ip ruote show 的命令执行由 ip rule show的执行结果动态决定，我觉个例子，假设 ip rule show的执行结果的某一行是10000:  from all fwmark 0xc0000/0xd0000 lookup 99 ，lookup之后的字符串输出99就表示一个route表名，此时就要继续执行ip route show table + 刚才的table名，然后在得到输出后，请用UI展示结果并基于专业知识分析对应的路由信息的含义
+

@@ -1,0 +1,18 @@
+# lookup 后面跟着的是route table名
+0:  from all lookup local 
+10000:  from all fwmark 0xc0000/0xd0000 lookup 99 
+11000:  from all iif lo oif dummy0 uidrange 0-0 lookup 1003 
+11000:  from all iif lo oif rmnet_data0 uidrange 0-0 lookup 1010 
+11000:  from all iif lo oif wlan0 uidrange 0-0 lookup 1020 
+16000:  from all fwmark 0x10063/0x1ffff iif lo lookup 97 
+16000:  from all fwmark 0xd0001/0xdffff iif lo lookup 1010 
+16000:  from all fwmark 0x10067/0x1ffff iif lo lookup 1020 
+17000:  from all iif lo oif dummy0 lookup 1003 
+17000:  from all fwmark 0xc0000/0xc0000 iif lo oif rmnet_data0 lookup 1010 
+17000:  from all iif lo oif wlan0 lookup 1020 
+18000:  from all fwmark 0x0/0x10000 lookup 99 
+19000:  from all fwmark 0x0/0x10000 lookup 98 
+20000:  from all fwmark 0x0/0x10000 lookup 97 
+23000:  from all fwmark 0x67/0x1ffff iif lo lookup 1020 
+29000:  from all fwmark 0x0/0xffff iif lo lookup 1020 
+32000:  from all unreachable

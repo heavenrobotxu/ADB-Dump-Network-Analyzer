@@ -1,0 +1,35 @@
+Configs:
+  netstats_combine_subtype_enabled=false 
+Active interfaces:
+  iface=wlan0 ident=[{type=1, subType=0, networkId="Pocky_Family", metered=false, defaultNetwork=true, oemManaged=0}] 
+Active UID interfaces:
+  iface=wlan0 ident=[{type=1, subType=0, networkId="Pocky_Family", metered=false, defaultNetwork=true, oemManaged=0}] 
+Top openSession callers (uid=count):
+
+Stats Providers:
+  OffloadController Xt:
+    NetworkStats: elapsedRealtime=0
+  BpfCoordinator Xt:
+    NetworkStats: elapsedRealtime=0
+  ImsPhoneCallTracker Xt:
+    NetworkStats: elapsedRealtime=0
+Dev stats:
+  Pending bytes: 0
+  History since boot:
+  ident=[{type=1, subType=0, networkId="Pocky_Family", metered=false, defaultNetwork=false, oemManaged=0}] uid=-1 set=ALL tag=0x0
+    NetworkStatsHistory: bucketDuration=3600
+      st=1740423600 rb=40 rp=1 tb=66 tp=1 op=0
+  ident=[{type=1, subType=0, networkId="Pocky_Family", metered=false, defaultNetwork=true, oemManaged=0}] uid=-1 set=ALL tag=0x0
+    NetworkStatsHistory: bucketDuration=3600
+      st=1740423600 rb=3031778 rp=3379 tb=291866 tp=3558 op=0
+      st=1740427200 rb=78797850 rp=67012 tb=2916851 tp=39091 op=0
+Xt stats:
+  Pending bytes: 0
+  History since boot:
+  ident=[{type=1, subType=0, networkId="Pocky_Family", metered=false, defaultNetwork=false, oemManaged=0}] uid=-1 set=ALL tag=0x0
+    NetworkStatsHistory: bucketDuration=3600
+      st=1740423600 rb=40 rp=1 tb=66 tp=1 op=0
+  ident=[{type=1, subType=0, networkId="Pocky_Family", metered=false, defaultNetwork=true, oemManaged=0}] uid=-1 set=ALL tag=0x0
+    NetworkStatsHistory: bucketDuration=3600
+      st=1740423600 rb=3031778 rp=3379 tb=291866 tp=3558 op=0
+      st=1740427200 rb=78797850 rp=67012 tb=2916851 tp=39091 op=0

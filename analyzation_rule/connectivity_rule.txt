@@ -1,0 +1,138 @@
+# 已经注册在ConnectivityService中的NetworkProviders有哪些
+NetworkProviders for: TelephonyNetworkFactory[0] VpnNetworkProvider:0 VcnNetworkProvider WifiNetworkFactory UntrustedWifiNetworkFactory OemPaidWifiNetworkFactory PhoneSwitcherNetworkRequstListener Ethernet WIFI_AWARE_FACTORY
+# 默认的NetworkId
+Active default network: 100
+
+Current per-app default networks: Per-App Network Preference:
+    none
+# 当前已注册的NetworkAgent信息，重要数据，network{100} 花括号里的内容是networkId，Capabilities表示网络能力声明，重要数据，要呈现出来
+Current Networks:
+  NetworkAgentInfo{network{100}  handle{432902426637}  ni{WIFI CONNECTED extra: } Score(60 ; KeepConnected : 0 ; Policies : TRANSPORT_PRIMARY&EVER_VALIDATED&IS_UNMETERED&EVER_USER_SELECTED&IS_VALIDATED)  everValidated lastValidated explicitlySelected  lp{{InterfaceName: wlan0 LinkAddresses: [ fe80::10ff:29ff:fead:6bf4/64,192.168.110.139/24 ] DnsAddresses: [ /192.168.110.1 ] Domains: lan MTU: 0 ServerAddress: /192.168.110.1 TcpBufferSizes: 524288,2097152,8388608,262144,524288,4194304 Routes: [ fe80::/64 -> :: wlan0 mtu 0,192.168.110.0/24 -> 0.0.0.0 wlan0 mtu 0,0.0.0.0/0 -> 192.168.110.1 wlan0 mtu 0 ]}}  nc{[ Transports: WIFI Capabilities: NOT_METERED&INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&VALIDATED&NOT_ROAMING&FOREGROUND&NOT_CONGESTED&NOT_SUSPENDED&NOT_VCN_MANAGED LinkUpBandwidth>=12000Kbps LinkDnBandwidth>=16022Kbps Specifier: <WifiNetworkAgentSpecifier [WifiConfiguration=, SSID="Pocky_Family", BSSID=d6:31:27:8a:3c:d3, band=2, mMatchLocalOnlySpecifiers=false]> TransportInfo: <SSID: "Pocky_Family", BSSID: d6:31:27:8a:3c:d3, MAC: 12:ff:29:ad:6b:f4, Security type: 2, Supplicant state: COMPLETED, Wi-Fi standard: 5, RSSI: -56, Link speed: 650Mbps, Tx Link speed: 650Mbps, Max Supported Tx Link speed: 866Mbps, Rx Link speed: 585Mbps, Max Supported Rx Link speed: 866Mbps, Frequency: 5220MHz, Net ID: 2, Metered hint: false, score: 60, CarrierMerged: false, SubscriptionId: -1, IsPrimary: 1> SignalStrength: -56 OwnerUid: 1000 AdminUids: [1000] SSID: "Pocky_Family"]}}
+  //发送到ConnectivityService的NetworkRequest请求，这里不需要全部展示，按照RequestorPkg做分类，每个RequestorPkg只展示一条信息
+    Requests: REQUEST:15 LISTEN:15 BACKGROUND_REQUEST:0 total:30
+      NetworkRequest [ REQUEST id=1, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&NOT_VCN_MANAGED RequestorUid: 1000 RequestorPkg: android] ]
+      NetworkRequest [ LISTEN id=5, [ Capabilities: FOREGROUND RequestorUid: 1000 RequestorPkg: android] ]
+      NetworkRequest [ REQUEST id=7, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 1000 RequestorUid: 1000 RequestorPkg: android] ]
+      NetworkRequest [ LISTEN id=8, [ Capabilities: FOREGROUND RequestorUid: 1000 RequestorPkg: android] ]
+      NetworkRequest [ LISTEN id=9, [ Capabilities: NOT_RESTRICTED&TRUSTED&NOT_VPN&FOREGROUND&NOT_VCN_MANAGED Uid: 1000 RequestorUid: 1000 RequestorPkg: android] ]
+      NetworkRequest [ LISTEN id=10, [ Capabilities: NOT_RESTRICTED&TRUSTED&NOT_VPN&FOREGROUND&NOT_VCN_MANAGED Uid: 1000 RequestorUid: 1000 RequestorPkg: android] ]
+      NetworkRequest [ LISTEN id=11, [ RequestorUid: 1000 RequestorPkg: android] ]
+      NetworkRequest [ LISTEN id=13, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&VALIDATED&NOT_VCN_MANAGED Uid: 1000 RequestorUid: 1000 RequestorPkg: android] ]
+      NetworkRequest [ REQUEST id=15, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 1000 RequestorUid: 1000 RequestorPkg: android] ]
+      NetworkRequest [ REQUEST id=17, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 1073 RequestorUid: 1073 RequestorPkg: com.android.networkstack] ]
+      NetworkRequest [ LISTEN id=18, [ Transports: WIFI Capabilities: NOT_RESTRICTED&TRUSTED&NOT_VPN&NOT_VCN_MANAGED Uid: 1073 RequestorUid: 1073 RequestorPkg: com.android.networkstack] ]
+      NetworkRequest [ TRACK_SYSTEM_DEFAULT id=19, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&NOT_VCN_MANAGED RequestorUid: 1073 RequestorPkg: com.android.networkstack.tethering] ]
+      NetworkRequest [ LISTEN id=20, [ Transports: WIFI Capabilities: INTERNET&TRUSTED&NOT_VPN&NOT_VCN_MANAGED Uid: 1001 RequestorUid: 1001 RequestorPkg: com.android.phone] ]
+      NetworkRequest [ REQUEST id=22, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 1001 RequestorUid: 1001 RequestorPkg: com.android.phone] ]
+      NetworkRequest [ LISTEN id=23, [ Transports: CELLULAR|WIFI Capabilities: NOT_VPN RequestorUid: 10090 RequestorPkg: com.android.systemui] ]
+      NetworkRequest [ REQUEST id=25, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10090 RequestorUid: 10090 RequestorPkg: com.android.systemui] ]
+      NetworkRequest [ REQUEST id=27, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10090 RequestorUid: 10090 RequestorPkg: com.android.systemui] ]
+      NetworkRequest [ LISTEN id=28, [ RequestorUid: 10090 RequestorPkg: com.android.systemui] ]
+      NetworkRequest [ REQUEST id=32, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 1000 RequestorUid: 1000 RequestorPkg: android] ]
+      NetworkRequest [ REQUEST id=34, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10063 RequestorUid: 10063 RequestorPkg: com.qualcomm.qti.cne] ]
+      NetworkRequest [ LISTEN id=35, [ Transports: WIFI Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&NOT_VCN_MANAGED Uid: 10063 RequestorUid: 10063 RequestorPkg: com.qualcomm.qti.cne] ]
+      NetworkRequest [ REQUEST id=38, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10069 RequestorUid: 1000 RequestorPkg: android] ]
+      NetworkRequest [ REQUEST id=40, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10067 RequestorUid: 1000 RequestorPkg: android] ]
+      NetworkRequest [ REQUEST id=42, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10040 RequestorUid: 1000 RequestorPkg: android] ]
+      NetworkRequest [ REQUEST id=46, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10102 RequestorUid: 10102 RequestorPkg: tv.danmaku.bili] ]
+      NetworkRequest [ LISTEN id=47, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10102 RequestorUid: 10102 RequestorPkg: tv.danmaku.bili] ]
+      NetworkRequest [ REQUEST id=49, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10102 RequestorUid: 10102 RequestorPkg: tv.danmaku.bili] ]
+      NetworkRequest [ LISTEN id=50, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10102 RequestorUid: 10102 RequestorPkg: tv.danmaku.bili] ]
+      NetworkRequest [ REQUEST id=52, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10102 RequestorUid: 10102 RequestorPkg: tv.danmaku.bili] ]
+      NetworkRequest [ LISTEN id=53, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10102 RequestorUid: 10102 RequestorPkg: tv.danmaku.bili] ]
+    Inactivity Timers:
+
+Status for known UIDs:
+  
+Network Requests:
+  uid/pid:1000/1972 activeRequest: 1 callbackRequest: 1 [NetworkRequest [ REQUEST id=1, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&NOT_VCN_MANAGED RequestorUid: 1000 RequestorPkg: android] ]] callback flags: 1 priority: 2147483647
+  uid/pid:1000/1972 activeRequest: null callbackRequest: 2 [NetworkRequest [ BACKGROUND_REQUEST id=2, [ Transports: CELLULAR Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&NOT_VCN_MANAGED RequestorUid: 1000 RequestorPkg: android] ]] callback flags: 1 priority: 2147483647
+  uid/pid:1000/1972 activeRequest: null callbackRequest: 5 [NetworkRequest [ LISTEN id=5, [ Capabilities: FOREGROUND RequestorUid: 1000 RequestorPkg: android] ]] callback flags: 0 priority: 2147483647
+  uid/pid:1000/1972 activeRequest: 7 callbackRequest: 6 [NetworkRequest [ REQUEST id=7, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 1000 RequestorUid: 1000 RequestorPkg: android] ]] callback flags: 0 priority: 2147483647
+  uid/pid:1000/1972 activeRequest: null callbackRequest: 8 [NetworkRequest [ LISTEN id=8, [ Capabilities: FOREGROUND RequestorUid: 1000 RequestorPkg: android] ]] callback flags: 0 priority: 2147483647
+  uid/pid:1000/1972 activeRequest: null callbackRequest: 9 [NetworkRequest [ LISTEN id=9, [ Capabilities: NOT_RESTRICTED&TRUSTED&NOT_VPN&FOREGROUND&NOT_VCN_MANAGED Uid: 1000 RequestorUid: 1000 RequestorPkg: android] ]] callback flags: 0 priority: 2147483647
+  uid/pid:1000/1972 activeRequest: null callbackRequest: 10 [NetworkRequest [ LISTEN id=10, [ Capabilities: NOT_RESTRICTED&TRUSTED&NOT_VPN&FOREGROUND&NOT_VCN_MANAGED Uid: 1000 RequestorUid: 1000 RequestorPkg: android] ]] callback flags: 0 priority: 2147483647
+  uid/pid:1000/1972 activeRequest: null callbackRequest: 11 [NetworkRequest [ LISTEN id=11, [ RequestorUid: 1000 RequestorPkg: android] ]] callback flags: 0 priority: 2147483647
+  uid/pid:1000/1972 activeRequest: null callbackRequest: 12 [NetworkRequest [ LISTEN id=12, [ Transports: CELLULAR Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&NOT_VCN_MANAGED Uid: 1000 RequestorUid: 1000 RequestorPkg: android] ]] callback flags: 0 priority: 2147483647
+  uid/pid:1000/1972 activeRequest: null callbackRequest: 13 [NetworkRequest [ LISTEN id=13, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&VALIDATED&NOT_VCN_MANAGED Uid: 1000 RequestorUid: 1000 RequestorPkg: android] ]] callback flags: 0 priority: 2147483647
+  uid/pid:1000/1972 activeRequest: 15 callbackRequest: 14 [NetworkRequest [ REQUEST id=15, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 1000 RequestorUid: 1000 RequestorPkg: android] ]] callback flags: 0 priority: 2147483647
+  uid/pid:1073/2744 activeRequest: 17 callbackRequest: 16 [NetworkRequest [ REQUEST id=17, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 1073 RequestorUid: 1073 RequestorPkg: com.android.networkstack] ]] callback flags: 0 priority: 2147483647
+  uid/pid:1073/2744 activeRequest: null callbackRequest: 18 [NetworkRequest [ LISTEN id=18, [ Transports: WIFI Capabilities: NOT_RESTRICTED&TRUSTED&NOT_VPN&NOT_VCN_MANAGED Uid: 1073 RequestorUid: 1073 RequestorPkg: com.android.networkstack] ]] callback flags: 0 priority: 2147483647
+  uid/pid:1073/2744 activeRequest: 19 callbackRequest: 19 [NetworkRequest [ TRACK_SYSTEM_DEFAULT id=19, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&NOT_VCN_MANAGED RequestorUid: 1073 RequestorPkg: com.android.networkstack.tethering] ]] callback flags: 0 priority: 2147483647
+  uid/pid:1001/2891 activeRequest: null callbackRequest: 20 [NetworkRequest [ LISTEN id=20, [ Transports: WIFI Capabilities: INTERNET&TRUSTED&NOT_VPN&NOT_VCN_MANAGED Uid: 1001 RequestorUid: 1001 RequestorPkg: com.android.phone] ]] callback flags: 0 priority: 2147483647
+  uid/pid:1001/2891 activeRequest: 22 callbackRequest: 21 [NetworkRequest [ REQUEST id=22, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 1001 RequestorUid: 1001 RequestorPkg: com.android.phone] ]] callback flags: 0 priority: 2147483647
+  uid/pid:10090/2670 activeRequest: null callbackRequest: 23 [NetworkRequest [ LISTEN id=23, [ Transports: CELLULAR|WIFI Capabilities: NOT_VPN RequestorUid: 10090 RequestorPkg: com.android.systemui] ]] callback flags: 1 priority: 2147483647
+  uid/pid:10090/2670 activeRequest: 25 callbackRequest: 24 [NetworkRequest [ REQUEST id=25, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10090 RequestorUid: 10090 RequestorPkg: com.android.systemui] ]] callback flags: 1 priority: 2147483647
+  uid/pid:10090/2670 activeRequest: 27 callbackRequest: 26 [NetworkRequest [ REQUEST id=27, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10090 RequestorUid: 10090 RequestorPkg: com.android.systemui] ]] callback flags: 1 priority: 2147483647
+  uid/pid:10090/2670 activeRequest: null callbackRequest: 28 [NetworkRequest [ LISTEN id=28, [ RequestorUid: 10090 RequestorPkg: com.android.systemui] ]] callback flags: 0 priority: 2147483647
+  uid/pid:1000/1972 activeRequest: 32 callbackRequest: 31 [NetworkRequest [ REQUEST id=32, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 1000 RequestorUid: 1000 RequestorPkg: android] ]] callback flags: 0 priority: 2147483647
+  uid/pid:10063/2778 activeRequest: 34 callbackRequest: 33 [NetworkRequest [ REQUEST id=34, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10063 RequestorUid: 10063 RequestorPkg: com.qualcomm.qti.cne] ]] callback flags: 0 priority: 2147483647
+  uid/pid:10063/2778 activeRequest: null callbackRequest: 35 [NetworkRequest [ LISTEN id=35, [ Transports: WIFI Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&NOT_VCN_MANAGED Uid: 10063 RequestorUid: 10063 RequestorPkg: com.qualcomm.qti.cne] ]] callback flags: 0 priority: 2147483647
+  uid/pid:10063/2778 activeRequest: null callbackRequest: 36 [NetworkRequest [ LISTEN id=36, [ Transports: CELLULAR Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&NOT_VCN_MANAGED Uid: 10063 RequestorUid: 10063 RequestorPkg: com.qualcomm.qti.cne] ]] callback flags: 0 priority: 2147483647
+  uid/pid:1000/1972 asUid: 10069 activeRequest: 38 callbackRequest: 37 [NetworkRequest [ REQUEST id=38, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10069 RequestorUid: 1000 RequestorPkg: android] ]] callback flags: 0 priority: 2147483647
+  uid/pid:1000/1972 asUid: 10067 activeRequest: 40 callbackRequest: 39 [NetworkRequest [ REQUEST id=40, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10067 RequestorUid: 1000 RequestorPkg: android] ]] callback flags: 0 priority: 2147483647
+  uid/pid:1000/1972 asUid: 10040 activeRequest: 42 callbackRequest: 41 [NetworkRequest [ REQUEST id=42, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10040 RequestorUid: 1000 RequestorPkg: android] ]] callback flags: 0 priority: 2147483647
+  uid/pid:10102/4044 activeRequest: 46 callbackRequest: 45 [NetworkRequest [ REQUEST id=46, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10102 RequestorUid: 10102 RequestorPkg: tv.danmaku.bili] ]] callback flags: 0 priority: 2147483647
+  uid/pid:10102/4044 activeRequest: null callbackRequest: 47 [NetworkRequest [ LISTEN id=47, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10102 RequestorUid: 10102 RequestorPkg: tv.danmaku.bili] ]] callback flags: 0 priority: 2147483647
+  uid/pid:10102/4410 activeRequest: 49 callbackRequest: 48 [NetworkRequest [ REQUEST id=49, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10102 RequestorUid: 10102 RequestorPkg: tv.danmaku.bili] ]] callback flags: 0 priority: 2147483647
+  uid/pid:10102/4410 activeRequest: null callbackRequest: 50 [NetworkRequest [ LISTEN id=50, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10102 RequestorUid: 10102 RequestorPkg: tv.danmaku.bili] ]] callback flags: 0 priority: 2147483647
+  uid/pid:10102/5561 activeRequest: 52 callbackRequest: 51 [NetworkRequest [ REQUEST id=52, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10102 RequestorUid: 10102 RequestorPkg: tv.danmaku.bili] ]] callback flags: 0 priority: 2147483647
+  uid/pid:10102/5561 activeRequest: null callbackRequest: 53 [NetworkRequest [ LISTEN id=53, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10102 RequestorUid: 10102 RequestorPkg: tv.danmaku.bili] ]] callback flags: 0 priority: 2147483647
+
+mLegacyTypeTracker:
+  Supported types: 0 1 2 3 4 5 7 9 10 11 12 13 14 15 17
+  Current state:
+    1 [100 WIFI]
+
+
+Supported Socket keepalives: [1, 3, 0, 0, 0, 0, 0, 0, 0]
+Reserved Privileged keepalives: 2
+Allowed Unprivileged keepalives per uid: 2
+Socket keepalives:
+
+Bad Wi-Fi avoidance: unrestricted
+
+
+mNetworkRequestInfoLogs (most recent first):
+  2025-02-25T03:59:16.090 - RELEASE uid/pid:10040/3995 activeRequest: 44 callbackRequest: 43 [NetworkRequest [ REQUEST id=44, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10040 RequestorUid: 10040 RequestorPkg: com.android.statementservice] ]] callback flags: 0 priority: 2147483647
+  2025-02-24T23:47:40.688 - REGISTER uid/pid:10102/5561 activeRequest: null callbackRequest: 53 [NetworkRequest [ LISTEN id=53, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10102 RequestorUid: 10102 RequestorPkg: tv.danmaku.bili] ]] callback flags: 0 priority: 2147483647
+  2025-02-24T23:47:40.685 - REGISTER uid/pid:10102/5561 activeRequest: null callbackRequest: 51 [NetworkRequest [ REQUEST id=52, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10102 RequestorUid: 10102 RequestorPkg: tv.danmaku.bili] ]] callback flags: 0 priority: 2147483647
+  2025-02-24T23:37:52.679 - REGISTER uid/pid:10102/4410 activeRequest: null callbackRequest: 50 [NetworkRequest [ LISTEN id=50, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10102 RequestorUid: 10102 RequestorPkg: tv.danmaku.bili] ]] callback flags: 0 priority: 2147483647
+  2025-02-24T23:37:52.672 - REGISTER uid/pid:10102/4410 activeRequest: null callbackRequest: 48 [NetworkRequest [ REQUEST id=49, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10102 RequestorUid: 10102 RequestorPkg: tv.danmaku.bili] ]] callback flags: 0 priority: 2147483647
+  2025-02-24T23:37:49.325 - REGISTER uid/pid:10102/4044 activeRequest: null callbackRequest: 47 [NetworkRequest [ LISTEN id=47, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10102 RequestorUid: 10102 RequestorPkg: tv.danmaku.bili] ]] callback flags: 0 priority: 2147483647
+  2025-02-24T23:37:49.322 - REGISTER uid/pid:10102/4044 activeRequest: null callbackRequest: 45 [NetworkRequest [ REQUEST id=46, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10102 RequestorUid: 10102 RequestorPkg: tv.danmaku.bili] ]] callback flags: 0 priority: 2147483647
+  2025-02-24T23:37:47.534 - RELEASE uid/pid:1001/2891 activeRequest: null callbackRequest: 29 [NetworkRequest [ REQUEST id=30, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 1001 RequestorUid: 1001 RequestorPkg: com.android.phone] ]] callback flags: 0 priority: 2147483647
+  2025-02-24T23:37:46.930 - REGISTER uid/pid:10040/3995 activeRequest: null callbackRequest: 43 [NetworkRequest [ REQUEST id=44, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10040 RequestorUid: 10040 RequestorPkg: com.android.statementservice] ]] callback flags: 0 priority: 2147483647
+  2025-02-24T23:37:46.861 - REGISTER uid/pid:1000/1972 asUid: 10040 activeRequest: null callbackRequest: 41 [NetworkRequest [ REQUEST id=42, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10040 RequestorUid: 1000 RequestorPkg: android] ]] callback flags: 0 priority: 2147483647
+  2025-02-24T23:37:45.503 - REGISTER uid/pid:1000/1972 asUid: 10067 activeRequest: null callbackRequest: 39 [NetworkRequest [ REQUEST id=40, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10067 RequestorUid: 1000 RequestorPkg: android] ]] callback flags: 0 priority: 2147483647
+  2025-02-24T23:37:45.379 - REGISTER uid/pid:1000/1972 asUid: 10069 activeRequest: null callbackRequest: 37 [NetworkRequest [ REQUEST id=38, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10069 RequestorUid: 1000 RequestorPkg: android] ]] callback flags: 0 priority: 2147483647
+  2025-02-24T23:37:44.106 - REGISTER uid/pid:10063/2778 activeRequest: null callbackRequest: 36 [NetworkRequest [ LISTEN id=36, [ Transports: CELLULAR Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&NOT_VCN_MANAGED Uid: 10063 RequestorUid: 10063 RequestorPkg: com.qualcomm.qti.cne] ]] callback flags: 0 priority: 2147483647
+  2025-02-24T23:37:44.083 - REGISTER uid/pid:10063/2778 activeRequest: null callbackRequest: 35 [NetworkRequest [ LISTEN id=35, [ Transports: WIFI Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&NOT_VCN_MANAGED Uid: 10063 RequestorUid: 10063 RequestorPkg: com.qualcomm.qti.cne] ]] callback flags: 0 priority: 2147483647
+  2025-02-24T23:37:44.078 - REGISTER uid/pid:10063/2778 activeRequest: null callbackRequest: 33 [NetworkRequest [ REQUEST id=34, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10063 RequestorUid: 10063 RequestorPkg: com.qualcomm.qti.cne] ]] callback flags: 0 priority: 2147483647
+  2025-02-24T23:37:43.860 - REGISTER uid/pid:1000/1972 activeRequest: null callbackRequest: 31 [NetworkRequest [ REQUEST id=32, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 1000 RequestorUid: 1000 RequestorPkg: android] ]] callback flags: 0 priority: 2147483647
+  2025-02-24T23:37:42.533 - REGISTER uid/pid:1001/2891 activeRequest: null callbackRequest: 29 [NetworkRequest [ REQUEST id=30, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 1001 RequestorUid: 1001 RequestorPkg: com.android.phone] ]] callback flags: 0 priority: 2147483647
+  2025-02-24T23:37:42.345 - REGISTER uid/pid:10090/2670 activeRequest: null callbackRequest: 28 [NetworkRequest [ LISTEN id=28, [ RequestorUid: 10090 RequestorPkg: com.android.systemui] ]] callback flags: 0 priority: 2147483647
+  2025-02-24T23:37:42.341 - REGISTER uid/pid:10090/2670 activeRequest: null callbackRequest: 26 [NetworkRequest [ REQUEST id=27, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10090 RequestorUid: 10090 RequestorPkg: com.android.systemui] ]] callback flags: 1 priority: 2147483647
+  2025-02-24T23:37:42.338 - REGISTER uid/pid:10090/2670 activeRequest: null callbackRequest: 24 [NetworkRequest [ REQUEST id=25, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10090 RequestorUid: 10090 RequestorPkg: com.android.systemui] ]] callback flags: 1 priority: 2147483647
+
+mNetworkInfoBlockingLogs (most recent first):
+
+NetTransition WakeLock activity (most recent first):
+  total acquisitions: 0
+  total releases: 0
+  cumulative duration: 0s
+  longest duration: 0s
+  
+  bandwidth update requests (by uid):
+
+mOemNetworkPreferencesLogs (most recent first):
+
+
+Permission Monitor:
+  Interface filtering rules:
+
+Legacy network activity:
+  mNetworkActive=true
+  Idle timers:
+    wlan0:
+      timeout=15 type=1
