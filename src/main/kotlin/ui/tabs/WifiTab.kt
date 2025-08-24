@@ -88,11 +88,20 @@ fun WifiTab(
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Text(
-                text = "WiFi Dump Analysis",
-                fontSize = 24.sp,
-                fontWeight = FontWeight.Bold
-            )
+            Column {
+                Text(
+                    text = "WiFi Real-time Analysis",
+                    fontSize = 24.sp,
+                    fontWeight = FontWeight.Bold
+                )
+                
+                Text(
+                    text = "Real-time WiFi system status and configuration analysis",
+                    fontSize = 14.sp,
+                    color = Color.Gray,
+                    modifier = Modifier.padding(top = 4.dp)
+                )
+            }
             
             Button(
                 onClick = {

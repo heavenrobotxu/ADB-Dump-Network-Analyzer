@@ -1,0 +1,702 @@
+
+WINDOW MANAGER LAST ANR (dumpsys window lastanr)
+  <no ANR has occurred since boot>
+
+WINDOW MANAGER POLICY STATE (dumpsys window policy)
+    mSafeMode=false mSystemReady=true mSystemBooted=true
+    mCameraLensCoverState=CAMERA_LENS_COVER_ABSENT
+    mWakeGestureEnabledSetting=true
+    mUiMode=UI_MODE_TYPE_CARmEnableCarDockHomeCapture=false
+    mLidKeyboardAccessibility=0 mLidNavigationAccessibility=0 getLidBehavior=LID_BEHAVIOR_SLEEP
+    mLongPressOnBackBehavior=LONG_PRESS_BACK_NOTHING
+    mLongPressOnHomeBehavior=LONG_PRESS_HOME_NOTHING
+    mDoubleTapOnHomeBehavior=DOUBLE_TAP_HOME_NOTHING
+    mShortPressOnPowerBehavior=SHORT_PRESS_POWER_GO_TO_SLEEP
+    mLongPressOnPowerBehavior=LONG_PRESS_POWER_GLOBAL_ACTIONS
+    mShortPressOnSettingsBehavior=SHORT_PRESS_SETTINGS_NOTHING
+    mLongPressOnPowerAssistantTimeoutMs=500
+    mVeryLongPressOnPowerBehavior=VERY_LONG_PRESS_POWER_NOTHING
+    mDoublePressOnPowerBehavior=MULTI_PRESS_POWER_NOTHING
+    mTriplePressOnPowerBehavior=MULTI_PRESS_POWER_NOTHING
+    mSupportShortPressPowerWhenDefaultDisplayOn=false
+    mPowerVolUpBehavior=POWER_VOLUME_UP_BEHAVIOR_GLOBAL_ACTIONS
+    mShortPressOnSleepBehavior=SHORT_PRESS_SLEEP_GO_TO_SLEEP
+    mShortPressOnWindowBehavior=SHORT_PRESS_WINDOW_NOTHING
+    mShortPressOnStemPrimaryBehavior=SHORT_PRESS_PRIMARY_NOTHING
+    mDoublePressOnStemPrimaryBehavior=DOUBLE_PRESS_PRIMARY_NOTHING
+    mTriplePressOnStemPrimaryBehavior=TRIPLE_PRESS_PRIMARY_NOTHING
+    mLongPressOnStemPrimaryBehavior=LONG_PRESS_PRIMARY_NOTHING
+    mAllowStartActivityForLongPressOnPowerDuringSetup=false
+    mHasSoftInput=true
+    mDismissImeOnBackKeyPressed=false mIncallPowerBehavior=sleep
+    mIncallBackBehavior=<nothing> mEndcallBehavior=<nothing>
+    mDisplayHomeButtonHandlers=
+    mKeyguardOccluded=false mKeyguardOccludedChanged=false mPendingKeyguardOccluded=false
+    mAllowLockscreenWhenOnDisplays=false mLockScreenTimeout=6000000 mLockScreenTimerActive=false
+    mKidsModeEnabled=false
+mHapticTextHandleEnabled=true
+    mKeyMapping.size=0
+    KeyCombination rules:
+      KEYCODE_VOLUME_DOWN + KEYCODE_POWER
+      KEYCODE_VOLUME_DOWN + KEYCODE_VOLUME_UP
+      KEYCODE_VOLUME_UP + KEYCODE_POWER
+    SingleKey rules:
+      KeyCode=KEYCODE_POWER, LongPress=true, VeryLongPress=false, MaxMultiPressCount=1
+    Deferred key action executor:
+      empty
+    WakeGestureListener
+      mTriggerRequested=false
+      mSensor=null
+    KeyguardServiceDelegate
+      showing=false
+      inputRestricted=false
+      occluded=false
+      secure=false
+      dreaming=false
+      systemIsReady=true
+      deviceHasKeyguard=true
+      enabled=true
+      offReason=OFF_BECAUSE_OF_USER
+      currentUser=10
+      bootCompleted=true
+      screenState=SCREEN_STATE_ON
+      interactiveState=INTERACTIVE_STATE_AWAKE
+      KeyguardStateMonitor
+        mIsShowing=false
+        mSimSecure=false
+        mInputRestricted=false
+        mTrusted=false
+        mCurrentUserId=10
+    Looper state:
+      Looper (android.ui, tid 22) {929a685}
+        (Total messages: 0, polling=true, quitting=false)
+
+WINDOW MANAGER ANIMATOR STATE (dumpsys window animator)
+    Display{#0 state=ON size=2560x1600 ROTATION_270}:
+      Window #0: WindowStateAnimator{6fcf06b com.damiao.aaosmaps/com.damiao.aaosmaps.MainActivity}
+      Window #1: WindowStateAnimator{8b527c8 com.damiao.aaosmaps/com.damiao.aaosmaps.map.MapActivity}
+      Window #2: WindowStateAnimator{647b9ba com.android.car.carlauncher/com.android.car.carlauncher.CarLauncher}
+      Window #3: WindowStateAnimator{1abaae5 com.android.car.carlauncher/com.android.car.carlauncher.AppGridActivity}
+      Window #4: WindowStateAnimator{8f8508d com.android.car.settings/com.android.car.settings.Settings_Launcher_Homepage}
+      Window #5: WindowStateAnimator{4537242 com.android.car.developeroptions/com.android.car.developeroptions.CarDevelopmentSettingsDashboardActivity}
+      Window #6: WindowStateAnimator{3f11061 InputMethod}
+      Window #7: WindowStateAnimator{ca7b786 ShellDropTarget}
+      Window #8: WindowStateAnimator{4f82847 }
+      Window #9: WindowStateAnimator{7d8f874 TopCarSystemBar}
+      Window #10: WindowStateAnimator{cd519d SystemUIOverlayWindow}
+      Window #11: WindowStateAnimator{2b7c612 HeadsUpNotification}
+      Window #12: WindowStateAnimator{a8501e3 BottomCarSystemBar}
+      Window #13: WindowStateAnimator{9c727e0 ScreenDecorHwcOverlay}
+      Window #14: WindowStateAnimator{f326a99 ScreenDecorOverlay}
+      Window #15: WindowStateAnimator{48315e ScreenDecorOverlayBottom}
+
+
+
+WINDOW MANAGER SESSIONS (dumpsys window sessions)
+  Session Session{3dd1cfa 2631:u10a10049}:
+    mNumWindow=2 mCanAddInternalSystemWindow=true mAppOverlaySurfaces={} mAlertWindowSurfaces={} mClientDead=false mSurfaceSession=android.view.SurfaceSession@a7bd93f
+    mPackageName=com.android.car.carlauncher
+  Session Session{4aca5f1 2727:u10a10081}:
+    mNumWindow=1 mCanAddInternalSystemWindow=false mAppOverlaySurfaces={} mAlertWindowSurfaces={} mClientDead=false mSurfaceSession=android.view.SurfaceSession@8a6e20c
+    mPackageName=com.android.inputmethod.latin
+  Session Session{5003edc 20136:u10a1000}:
+    mNumWindow=1 mCanAddInternalSystemWindow=true mAppOverlaySurfaces={} mAlertWindowSurfaces={} mClientDead=false mSurfaceSession=android.view.SurfaceSession@563f253
+    mPackageName=com.android.car.developeroptions
+  Session Session{9841ab7 3269:u10a1000}:
+    mNumWindow=2 mCanAddInternalSystemWindow=true mAppOverlaySurfaces={} mAlertWindowSurfaces={} mClientDead=false mSurfaceSession=android.view.SurfaceSession@9361755
+    mPackageName=com.damiao.aaosmaps
+  Session Session{be96254 2547:u10a1000}:
+    mNumWindow=1 mCanAddInternalSystemWindow=true mAppOverlaySurfaces={Surface(name=)/@0x7e2056a} mAlertWindowSurfaces={} mClientDead=false mSurfaceSession=android.view.SurfaceSession@2deca5b
+    mPackageName=com.android.car.rotary
+  Session Session{c3fccf1 2234:u0a10124}:
+    mNumWindow=8 mCanAddInternalSystemWindow=true mAppOverlaySurfaces={} mAlertWindowSurfaces={} mClientDead=false mSurfaceSession=android.view.SurfaceSession@7e612f8
+    mPackageName=com.android.systemui
+  Session Session{df35557 20081:u10a1000}:
+    mNumWindow=1 mCanAddInternalSystemWindow=true mAppOverlaySurfaces={} mAlertWindowSurfaces={} mClientDead=false mSurfaceSession=android.view.SurfaceSession@e95a790
+    mPackageName=com.android.car.settings
+
+WINDOW MANAGER DISPLAY CONTENTS (dumpsys window displays)
+  Display: mDisplayId=0 (organized)
+    init=1600x2560 200dpi mMinSizeOfResizeableTaskDp=220 cur=2560x1600 app=2560x1480 rng=1600x1385-2560x2345
+    deferred=false mLayoutNeeded=false mTouchExcludeRegion=SkRegion((0,0,2560,1600))
+
+  mSetIgnoreOrientationRequest=true
+  overrideConfig={1.0 ?mcc0mnc [en_US] ldltr sw1280dp w2048dp h1108dp 200dpi xlrg long hdr widecg land car finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 2560, 1600) mAppBounds=Rect(0, 0 - 2560, 1480) mMaxBounds=Rect(0, 0 - 2560, 1600) mDisplayRotation=ROTATION_270 mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_270} as.2 s.44 fontWeightAdjustment=0}
+  mLayoutSeq=546
+  mCurrentFocus=Window{fc6296b u10 com.android.car.developeroptions/com.android.car.developeroptions.CarDevelopmentSettingsDashboardActivity}
+  mFocusedApp=ActivityRecord{89ab83c u10 com.android.car.developeroptions/.CarDevelopmentSettingsDashboardActivity t1000113}
+
+  mHoldScreenWindow=null
+  mObscuringWindow=Window{fc6296b u10 com.android.car.developeroptions/com.android.car.developeroptions.CarDevelopmentSettingsDashboardActivity}
+  mLastWakeLockHoldingWindow=null
+  mLastWakeLockObscuringWindow=null
+
+  displayId=0
+  mWallpaperTarget=null
+  mLastWallpaperZoomOut=0.0
+
+  Display areas in top down Z order:
+    * Leaf:36:36
+    * HideDisplayCutout:32:35
+      * OneHanded:34:35
+        * FullscreenMagnification:34:35
+          * Leaf:34:35
+      * FullscreenMagnification:33:33
+        * Leaf:33:33
+      * OneHanded:32:32
+        * Leaf:32:32
+    * WindowedMagnification:0:31
+      * HideDisplayCutout:26:31
+        * OneHanded:26:31
+          * FullscreenMagnification:29:31
+            * Leaf:29:31
+          * Leaf:28:28
+          * FullscreenMagnification:26:27
+            * Leaf:26:27
+      * Leaf:24:25
+      * HideDisplayCutout:18:23
+        * OneHanded:18:23
+          * FullscreenMagnification:18:23
+            * Leaf:18:23
+      * OneHanded:17:17
+        * FullscreenMagnification:17:17
+          * Leaf:17:17
+      * HideDisplayCutout:16:16
+        * OneHanded:16:16
+          * FullscreenMagnification:16:16
+            * Leaf:16:16
+      * OneHanded:15:15
+        * FullscreenMagnification:15:15
+          * Leaf:15:15
+      * HideDisplayCutout:0:14
+        * OneHanded:0:14
+          * ImePlaceholder:13:14
+            * ImeContainer
+          * FullscreenMagnification:0:12
+            * Leaf:3:12
+            * DefaultTaskDisplayArea (organized)
+            * Leaf:0:1
+
+  Task display areas in top down Z order:
+    TaskDisplayArea DefaultTaskDisplayArea
+      overrideConfig={0.0 ?mcc0mnc ?localeList ?layoutDir ?swdp ?wdp ?hdp ?density ?lsize ?long ?ldr ?wideColorGamut ?orien ?uimode ?night ?touch ?keyb/?/? ?nav/? winConfig={ mBounds=Rect(0, 0 - 0, 0) mAppBounds=null mMaxBounds=Rect(0, 0 - 0, 0) mDisplayRotation=undefined mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=undefined} ?fontWeightAdjustment}
+      mPreferredTopFocusableRootTask=Task{48da4fa #1000113 type=standard A=1001000:com.android.car.settings}
+      mLastFocusedRootTask=Task{48da4fa #1000113 type=standard A=1001000:com.android.car.settings}
+      Application tokens in top down Z order:
+      * Task{48da4fa #1000113 type=standard A=1001000:com.android.car.settings U=10 visible=true visibleRequested=true mode=fullscreen translucent=false sz=2}
+        bounds=[0,0][2560,1600]
+        * ActivityRecord{89ab83c u10 com.android.car.developeroptions/.CarDevelopmentSettingsDashboardActivity t1000113}
+        * ActivityRecord{1672508 u10 com.android.car.settings/.Settings_Launcher_Homepage t1000113}
+      * Task{a6c9426 #1000112 type=standard A=1010049:com.android.car.carlauncher U=10 visible=false visibleRequested=false mode=fullscreen translucent=true sz=1}
+        bounds=[0,0][2560,1600]
+        * ActivityRecord{78fb614 u10 com.android.car.carlauncher/.AppGridActivity t1000112}
+      * Task{592c73b #1 type=home U=0 visible=false visibleRequested=false mode=fullscreen translucent=true sz=1}
+        bounds=[0,0][2560,1600]
+        * Task{d053c3f #1000110 type=home A=1010049:com.android.car.carlauncher U=10 rootTaskId=1 visible=false visibleRequested=false mode=fullscreen translucent=true sz=1}
+          bounds=[0,0][2560,1600]
+          * ActivityRecord{f1db255 u10 com.android.car.carlauncher/.CarLauncher t1000110}
+      * Task{5dd7c75 #1000111 type=standard A=1001000:com.damiao.aaosmaps U=10 visible=false visibleRequested=false mode=multi-window translucent=true sz=2}
+        bounds=[505,95][2540,1480]
+        * ActivityRecord{806698c u10 com.damiao.aaosmaps/.map.MapActivity t1000111}
+        * ActivityRecord{49c847b u10 com.damiao.aaosmaps/.MainActivity t1000111}
+
+  no ScreenRotationAnimation 
+
+  rootHomeTask=Task=1
+
+  PinnedTaskController
+    mIsImeShowing=false
+    mImeHeight=0
+    mMinAspectRatio=0.41841003
+    mMaxAspectRatio=2.39
+
+  DisplayFrames w=2560 h=1600 r=3
+
+  DisplayPolicy
+    mCarDockEnablesAccelerometer=true mDeskDockEnablesAccelerometer=true
+    mDockMode=EXTRA_DOCK_STATE_UNDOCKED mLidState=LID_OPEN
+    mAwake=true mScreenOnEarly=true mScreenOnFully=true
+    mKeyguardDrawComplete=true mWindowManagerDrawComplete=true
+    mHdmiPlugged=false
+    mLastBehavior=DEFAULT
+    mShowingDream=false mDreamingLockscreen=false
+    mExpandedPanel=Window{e45dee8 u0 SystemUIOverlayWindow}
+    isKeyguardShowing=false
+    mTopGestureHost=Window{ebd29c u0 TopCarSystemBar}
+    mBottomGestureHost=Window{37374d2 u0 BottomCarSystemBar}
+    mFocusedWindow=Window{fc6296b u10 com.android.car.developeroptions/com.android.car.developeroptions.CarDevelopmentSettingsDashboardActivity}
+    mTopFullscreenOpaqueWindowState=Window{fc6296b u10 com.android.car.developeroptions/com.android.car.developeroptions.CarDevelopmentSettingsDashboardActivity}
+    mSystemBarColorApps={ActivityRecord{89ab83c u10 com.android.car.developeroptions/.CarDevelopmentSettingsDashboardActivity t1000113}}
+    mNavBarColorWindowCandidate=Window{fc6296b u10 com.android.car.developeroptions/com.android.car.developeroptions.CarDevelopmentSettingsDashboardActivity}
+    mNavBarBackgroundWindowCandidate=Window{fc6296b u10 com.android.car.developeroptions/com.android.car.developeroptions.CarDevelopmentSettingsDashboardActivity}
+    mLastStatusBarAppearanceRegions=
+    mLastLetterboxDetails=
+    mTopIsFullscreen=false
+    mImeInsetsConsumed=false
+    mForceShowNavigationBarEnabled=false mAllowLockscreenWhenOn=false
+    mRemoteInsetsControllerControlsSystemBars=false
+    mDecorInsetsInfo:
+      ROTATION_0={nonDecorInsets=[0,0][0,120], configInsets=[0,95][0,120], nonDecorFrame=[0,0][1600,2440], configFrame=[0,95][1600,2440]}
+      ROTATION_90={nonDecorInsets=[0,0][0,120], configInsets=[0,95][0,120], nonDecorFrame=[0,0][2560,1480], configFrame=[0,95][2560,1480]}
+      ROTATION_180={nonDecorInsets=[0,0][0,120], configInsets=[0,95][0,120], nonDecorFrame=[0,0][1600,2440], configFrame=[0,95][1600,2440]}
+      ROTATION_270={nonDecorInsets=[0,0][0,120], configInsets=[0,95][0,120], nonDecorFrame=[0,0][2560,1480], configFrame=[0,95][2560,1480]}
+    SystemGestures:
+      mDisplayCutoutTouchableRegionSize=0
+      mSwipeStartThreshold=Rect(30, 30 - 30, 30)
+      mSwipeDistanceThreshold=30
+    Looper state:
+      Looper (android.ui, tid 22) {929a685}
+        (Total messages: 0, polling=true, quitting=false)
+
+  DisplayRotation
+    mCurrentAppOrientation=SCREEN_ORIENTATION_UNSPECIFIED
+    mLastOrientation=-1
+    mRotation=3 mDeferredRotationPauseCount=0
+    mLandscapeRotation=ROTATION_90 mSeascapeRotation=ROTATION_270
+    mPortraitRotation=ROTATION_0 mUpsideDownRotation=ROTATION_180
+    mSupportAutoRotation=true
+    WindowOrientationListener
+      mEnabled=false
+      mCurrentRotation=ROTATION_270
+      mSensorType=null
+      mSensor={Sensor name="Device Orientation", vendor="Google", version=1, type=27, maxRange=3.0, resolution=1.0, power=0.001, minDelay=0}
+      mRate=2
+      OrientationSensorJudge
+        mDesiredRotation=-1
+        mProposedRotation=-1
+        mTouching=false
+        mTouchEndedTimestampNanos=45411271100932
+        mLastRotationResolution=-1
+
+    mCarDockRotation=-1 mDeskDockRotation=-1
+    mUserRotationMode=USER_ROTATION_LOCKED mUserRotation=ROTATION_270 mCameraRotationMode=0 mAllowAllRotations=unknown
+    mDemoHdmiRotation=ROTATION_90 mDemoHdmiRotationLock=false mUndockedHdmiRotation=-1
+    mLidOpenRotation=-1
+    mFixedToUserRotation=true
+
+
+  WindowInsetsStateController
+    InsetsState
+      mDisplayFrame=Rect(0, 0 - 2560, 1600)
+      mDisplayCutout=DisplayCutout{insets=Rect(0, 0 - 0, 0) waterfall=Insets{left=0, top=0, right=0, bottom=0} boundingRect={Bounds=[Rect(0, 0 - 0, 0), Rect(0, 0 - 0, 0), Rect(0, 0 - 0, 0), Rect(0, 0 - 0, 0)]} cutoutPathParserInfo={CutoutPathParserInfo{displayWidth=0 displayHeight=0 physicalDisplayWidth=0 physicalDisplayHeight=0 density={0.0} cutoutSpec={} rotation={0} scale={0.0} physicalPixelDisplaySizeRatio={0.0}}}}
+      mRoundedCorners=RoundedCorners{[RoundedCorner{position=TopLeft, radius=27, center=Point(27, 27)}, RoundedCorner{position=TopRight, radius=28, center=Point(2532, 28)}, RoundedCorner{position=BottomRight, radius=28, center=Point(2532, 1572)}, RoundedCorner{position=BottomLeft, radius=27, center=Point(27, 1573)}]}
+      mRoundedCornerFrame=Rect(0, 0 - 0, 0)
+      mPrivacyIndicatorBounds=PrivacyIndicatorBounds {static bounds=null rotation=3}
+      mDisplayShape=DisplayShape{ spec=1359591217 displayWidth=1600 displayHeight=2560 physicalPixelDisplaySizeRatio=1.0 rotation=3 offsetX=0 offsetY=0 scale=1.0}
+        InsetsSource id=bdc40000 type=statusBars frame=[0,0][2560,95] visible=true flags=
+        InsetsSource id=bdc40001 type=navigationBars frame=[0,1480][2560,1600] visible=true flags=
+        InsetsSource id=bdc40005 type=mandatorySystemGestures frame=[0,0][2560,95] visible=true flags=
+        InsetsSource id=bdc40025 type=mandatorySystemGestures frame=[0,1480][2560,1600] visible=true flags=
+        InsetsSource id=3 type=ime frame=[0,0][0,0] visible=false flags=
+    Control map:
+      Window{fc6296b u10 com.android.car.developeroptions/com.android.car.developeroptions.CarDevelopmentSettingsDashboardActivity}:
+        InsetsSourceControl: {bdc40000 mType=statusBars initiallyVisible mSurfacePosition=Point(0, 0) mInsetsHint=Insets{left=0, top=95, right=0, bottom=0}}
+        InsetsSourceControl: {bdc40001 mType=navigationBars initiallyVisible mSurfacePosition=Point(0, 1480) mInsetsHint=Insets{left=0, top=0, right=0, bottom=120}}
+        InsetsSourceControl: {3 mType=ime mSurfacePosition=Point(1280, 1600) mInsetsHint=Insets{left=0, top=0, right=0, bottom=0}}
+    InsetsSourceProviders:
+      ImeInsetsSourceProvider
+        mSource=InsetsSource id=3 type=ime frame=[0,0][0,0] visible=false flags=
+        mSourceFrame=Rect(1280, 1600 - 1280, 1600)
+        mControl=InsetsSourceControl mId=3 mType=ime mLeash=Surface(name=Surface(name=61b58c8 InputMethod)/@0xeefe9d - animation-leash of insets_animation)/@0x8266889 mInitiallyVisible=false mSurfacePosition=Point(1280, 1600) mInsetsHint=Insets{left=0, top=0, right=0, bottom=0} mSkipAnimationOnce=false
+        mInsetsHint=Insets{left=0, top=0, right=0, bottom=0} stale
+        mIsLeashReadyForDispatching=truemHasPendingPosition=false
+        mWindowContainer=Window{61b58c8 u10 InputMethod}
+        mAdapter=ControlAdapter mCapturedLeash=Surface(name=Surface(name=61b58c8 InputMethod)/@0xeefe9d - animation-leash of insets_animation)/@0x8266889
+        mControlTarget=Window{fc6296b u10 com.android.car.developeroptions/com.android.car.developeroptions.CarDevelopmentSettingsDashboardActivity}
+        mImeShowing=false
+      InsetsSourceProvider
+        mSource=InsetsSource id=bdc40025 type=mandatorySystemGestures frame=[0,1480][2560,1600] visible=true flags=
+        mSourceFrame=Rect(0, 1480 - 2560, 1600)
+        mIsLeashReadyForDispatching=truemHasPendingPosition=false
+        mWindowContainer=Window{37374d2 u0 BottomCarSystemBar}
+      InsetsSourceProvider
+        mSource=InsetsSource id=bdc40005 type=mandatorySystemGestures frame=[0,0][2560,95] visible=true flags=
+        mSourceFrame=Rect(0, 0 - 2560, 95)
+        mIsLeashReadyForDispatching=truemHasPendingPosition=false
+        mWindowContainer=Window{ebd29c u0 TopCarSystemBar}
+      InsetsSourceProvider
+        mSource=InsetsSource id=bdc40001 type=navigationBars frame=[0,1480][2560,1600] visible=true flags=
+        mSourceFrame=Rect(0, 1480 - 2560, 1600)
+        mControl=InsetsSourceControl mId=bdc40001 mType=navigationBars mLeash=Surface(name=Surface(name=37374d2 BottomCarSystemBar)/@0x3deb682 - animation-leash of insets_animation)/@0xf2a708e mInitiallyVisible=true mSurfacePosition=Point(0, 1480) mInsetsHint=Insets{left=0, top=0, right=0, bottom=120} mSkipAnimationOnce=false
+        mInsetsHint=Insets{left=0, top=0, right=0, bottom=120}
+        mIsLeashReadyForDispatching=truemHasPendingPosition=false
+        mWindowContainer=Window{37374d2 u0 BottomCarSystemBar}
+        mAdapter=ControlAdapter mCapturedLeash=Surface(name=Surface(name=37374d2 BottomCarSystemBar)/@0x3deb682 - animation-leash of insets_animation)/@0xf2a708e
+        mControlTarget=Window{fc6296b u10 com.android.car.developeroptions/com.android.car.developeroptions.CarDevelopmentSettingsDashboardActivity}
+      InsetsSourceProvider
+        mSource=InsetsSource id=bdc40000 type=statusBars frame=[0,0][2560,95] visible=true flags=
+        mSourceFrame=Rect(0, 0 - 2560, 95)
+        mControl=InsetsSourceControl mId=bdc40000 mType=statusBars mLeash=Surface(name=Surface(name=ebd29c TopCarSystemBar)/@0x296a02b - animation-leash of insets_animation)/@0xf3160af mInitiallyVisible=true mSurfacePosition=Point(0, 0) mInsetsHint=Insets{left=0, top=95, right=0, bottom=0} mSkipAnimationOnce=false
+        mInsetsHint=Insets{left=0, top=95, right=0, bottom=0}
+        mIsLeashReadyForDispatching=truemHasPendingPosition=false
+        mWindowContainer=Window{ebd29c u0 TopCarSystemBar}
+        mAdapter=ControlAdapter mCapturedLeash=Surface(name=Surface(name=ebd29c TopCarSystemBar)/@0x296a02b - animation-leash of insets_animation)/@0xf3160af
+        mControlTarget=Window{fc6296b u10 com.android.car.developeroptions/com.android.car.developeroptions.CarDevelopmentSettingsDashboardActivity}
+  InsetsPolicy
+    status: WINDOW_STATE_SHOWING
+    nav: WINDOW_STATE_SHOWING
+
+
+WINDOW MANAGER TOKENS (dumpsys window tokens)
+  All tokens:
+  Display #0
+    mInTouchMode=true
+  WindowToken{a0893da type=2040 android.os.BinderProxy@37ccefc}
+  WindowToken{c9c70f8 type=2011 android.os.Binder@51be05b}
+  WindowToken{b9e13b6 type=2032 android.os.Binder@737f51}
+  ActivityRecord{1672508 u10 com.android.car.settings/.Settings_Launcher_Homepage t1000113}
+  WindowToken{b1a146b type=2038 android.os.BinderProxy@e4931ac}
+  ActivityRecord{78fb614 u10 com.android.car.carlauncher/.AppGridActivity t1000112}
+  WindowToken{7e31bb type=2038 android.os.BinderProxy@a35c432}
+  WindowToken{bc6dcd1 type=2024 android.os.BinderProxy@fa99ff8}
+  WindowToken{412edff type=2024 android.os.BinderProxy@7afa11e}
+  ActivityRecord{806698c u10 com.damiao.aaosmaps/.map.MapActivity t1000111}
+  WindowToken{1b0af9c type=2024 android.os.BinderProxy@81d230f}
+  ActivityRecord{89ab83c u10 com.android.car.developeroptions/.CarDevelopmentSettingsDashboardActivity t1000113}
+  WindowToken{17520ca type=2032 android.os.Binder@2c10435}
+  WindowToken{7869739 type=2017 android.os.BinderProxy@b57f583}
+  WindowToken{ca5d934 type=2024 android.os.BinderProxy@6dd1407}
+  ActivityRecord{f1db255 u10 com.android.car.carlauncher/.CarLauncher t1000110}
+  ActivityRecord{49c847b u10 com.damiao.aaosmaps/.MainActivity t1000111}
+  WindowToken{f7beb6e type=2041 android.os.BinderProxy@ff782e9}
+
+WINDOW MANAGER WINDOWS (dumpsys window windows)
+  Window #0 Window{5b26b1b u0 ScreenDecorOverlayBottom}:
+    mDisplayId=0 rootTaskId=1 mSession=Session{c3fccf1 2234:u0a10124} mClient=android.os.BinderProxy@7afa11e
+    mOwnerUid=10124 showForAllUsers=true package=com.android.systemui appop=NONE
+    mAttrs={(0,0)(wrapxfill) gr=LEFT CENTER_HORIZONTAL sim={adjust=pan} layoutInDisplayCutoutMode=always ty=NAVIGATION_BAR_PANEL fmt=TRANSLUCENT
+      fl=NOT_FOCUSABLE NOT_TOUCHABLE NOT_TOUCH_MODAL LAYOUT_IN_SCREEN SPLIT_TOUCH FLAG_SLIPPERY
+      pfl=SHOW_FOR_ALL_USERS NO_MOVE_ANIMATION IS_ROUNDED_CORNERS_OVERLAY COLOR_SPACE_AGNOSTIC FIT_INSETS_CONTROLLED TRUSTED_OVERLAY
+      vsysui=LAYOUT_STABLE
+      bhv=DEFAULT}
+    Requested w=0 h=1600 mLayoutSeq=18
+    mHasSurface=false isReadyForDisplay()=false mWindowRemovalAllowed=false
+    WindowStateAnimator{48315e ScreenDecorOverlayBottom}:
+      mShownAlpha=0.0 mAlpha=1.0 mLastAlpha=0.0
+    mForceSeamlesslyRotate=true seamlesslyRotate: pending=null
+    isOnScreen=false
+    isVisible=false
+    keepClearAreas: restricted=[], unrestricted=[]
+    mPrepareSyncSeqId=0
+  Window #1 Window{c647da5 u0 ScreenDecorOverlay}:
+    mDisplayId=0 rootTaskId=1 mSession=Session{c3fccf1 2234:u0a10124} mClient=android.os.BinderProxy@81d230f
+    mOwnerUid=10124 showForAllUsers=true package=com.android.systemui appop=NONE
+    mAttrs={(0,0)(wrapxfill) gr=RIGHT CENTER_HORIZONTAL sim={adjust=pan} layoutInDisplayCutoutMode=always ty=NAVIGATION_BAR_PANEL fmt=TRANSLUCENT
+      fl=NOT_FOCUSABLE NOT_TOUCHABLE NOT_TOUCH_MODAL LAYOUT_IN_SCREEN SPLIT_TOUCH FLAG_SLIPPERY
+      pfl=SHOW_FOR_ALL_USERS NO_MOVE_ANIMATION IS_ROUNDED_CORNERS_OVERLAY COLOR_SPACE_AGNOSTIC FIT_INSETS_CONTROLLED TRUSTED_OVERLAY
+      vsysui=LAYOUT_STABLE
+      bhv=DEFAULT}
+    Requested w=0 h=1600 mLayoutSeq=17
+    mHasSurface=false isReadyForDisplay()=false mWindowRemovalAllowed=false
+    WindowStateAnimator{f326a99 ScreenDecorOverlay}:
+      mShownAlpha=0.0 mAlpha=1.0 mLastAlpha=0.0
+    mForceSeamlesslyRotate=true seamlesslyRotate: pending=null
+    isOnScreen=false
+    isVisible=false
+    keepClearAreas: restricted=[], unrestricted=[]
+    mPrepareSyncSeqId=0
+  Window #2 Window{10b750d u0 ScreenDecorHwcOverlay}:
+    mDisplayId=0 rootTaskId=1 mSession=Session{c3fccf1 2234:u0a10124} mClient=android.os.BinderProxy@fa99ff8
+    mOwnerUid=10124 showForAllUsers=true package=com.android.systemui appop=NONE
+    mAttrs={(0,0)(fillxfill) gr=TOP START CENTER sim={adjust=pan} layoutInDisplayCutoutMode=always ty=NAVIGATION_BAR_PANEL fmt=TRANSLUCENT colorMode=COLOR_MODE_A8
+      fl=NOT_FOCUSABLE NOT_TOUCHABLE NOT_TOUCH_MODAL LAYOUT_IN_SCREEN SPLIT_TOUCH FLAG_SLIPPERY
+      pfl=SHOW_FOR_ALL_USERS NO_MOVE_ANIMATION IS_ROUNDED_CORNERS_OVERLAY COLOR_SPACE_AGNOSTIC FIT_INSETS_CONTROLLED TRUSTED_OVERLAY
+      bhv=DEFAULT}
+    Requested w=2560 h=1600 mLayoutSeq=546
+    mHasSurface=true isReadyForDisplay()=true mWindowRemovalAllowed=false
+    WindowStateAnimator{9c727e0 ScreenDecorHwcOverlay}:
+      Surface: shown=true    mForceSeamlesslyRotate=true seamlesslyRotate: pending=null
+    isOnScreen=true
+    isVisible=true
+    keepClearAreas: restricted=[], unrestricted=[]
+    mPrepareSyncSeqId=0
+  Window #3 Window{37374d2 u0 BottomCarSystemBar}:
+    mDisplayId=0 rootTaskId=1 mSession=Session{c3fccf1 2234:u0a10124} mClient=android.os.BinderProxy@6dd1407
+    mOwnerUid=10124 showForAllUsers=true package=com.android.systemui appop=NONE
+    mAttrs={(0,0)(fillx120) gr=BOTTOM CENTER_VERTICAL sim={adjust=pan} layoutInDisplayCutoutMode=always ty=NAVIGATION_BAR_PANEL fmt=TRANSLUCENT
+      fl=NOT_FOCUSABLE NOT_TOUCH_MODAL WATCH_OUTSIDE_TOUCH SPLIT_TOUCH HARDWARE_ACCELERATED
+      pfl=FIT_INSETS_CONTROLLED
+      bhv=DEFAULT
+      providedInsets:
+        InsetsFrameProvider: {id=#bdc40001, index=0, type=navigationBars, source=FRAME, flags=[]}
+        InsetsFrameProvider: {id=#bdc40025, index=1, type=mandatorySystemGestures, source=FRAME, flags=[]}}
+    Requested w=2560 h=120 mLayoutSeq=546
+    mHasSurface=true isReadyForDisplay()=true mWindowRemovalAllowed=false
+    ContainerAnimator:
+      mLeash=Surface(name=Surface(name=37374d2 BottomCarSystemBar)/@0x3deb682 - animation-leash of insets_animation)/@0xf2a708e mAnimationType=insets_animation
+      Animation: com.android.server.wm.InsetsSourceProvider$ControlAdapter@9d5acbc
+        ControlAdapter mCapturedLeash=Surface(name=Surface(name=37374d2 BottomCarSystemBar)/@0x3deb682 - animation-leash of insets_animation)/@0xf2a708e
+    WindowStateAnimator{a8501e3 BottomCarSystemBar}:
+      Surface: shown=true    mForceSeamlesslyRotate=false seamlesslyRotate: pending=null
+    isOnScreen=true
+    isVisible=true
+    keepClearAreas: restricted=[], unrestricted=[]
+    mPrepareSyncSeqId=0
+  Window #4 Window{70fef2c u0 HeadsUpNotification}:
+    mDisplayId=0 rootTaskId=1 mSession=Session{c3fccf1 2234:u0a10124} mClient=android.os.BinderProxy@b57f583
+    mOwnerUid=10124 showForAllUsers=true package=com.android.systemui appop=NONE
+    mAttrs={(0,0)(fillxwrap) gr=TOP CENTER_VERTICAL sim={adjust=pan} ty=STATUS_BAR_SUB_PANEL fmt=TRANSLUCENT
+      fl=NOT_FOCUSABLE LAYOUT_IN_SCREEN HARDWARE_ACCELERATED
+      bhv=DEFAULT
+      fitTypes=NAVIGATION_BARS CAPTION_BAR}
+    Requested w=2560 h=580 mLayoutSeq=546
+    mHasSurface=true isReadyForDisplay()=true mWindowRemovalAllowed=false
+    WindowStateAnimator{2b7c612 HeadsUpNotification}:
+      Surface: shown=true    mForceSeamlesslyRotate=false seamlesslyRotate: pending=null
+    isOnScreen=true
+    isVisible=true
+    keepClearAreas: restricted=[], unrestricted=[]
+    mPrepareSyncSeqId=0
+  Window #5 Window{e45dee8 u0 SystemUIOverlayWindow}:
+    mDisplayId=0 rootTaskId=1 mSession=Session{c3fccf1 2234:u0a10124} mClient=android.os.BinderProxy@61d1985
+    mOwnerUid=10124 showForAllUsers=true package=com.android.systemui appop=NONE
+    mAttrs={(0,0)(fillxfill) gr=TOP CENTER_VERTICAL sim={adjust=resize} layoutInDisplayCutoutMode=always ty=NOTIFICATION_SHADE fmt=TRANSLUCENT
+      fl=DIM_BEHIND NOT_FOCUSABLE TOUCHABLE_WHEN_WAKING ALT_FOCUSABLE_IM WATCH_OUTSIDE_TOUCH SPLIT_TOUCH HARDWARE_ACCELERATED DRAWS_SYSTEM_BAR_BACKGROUNDS
+      pfl=FIT_INSETS_CONTROLLED
+      bhv=DEFAULT
+      fitTypes=STATUS_BARS}
+    Requested w=2560 h=1480 mLayoutSeq=499
+    mHasSurface=false isReadyForDisplay()=false mWindowRemovalAllowed=false
+    WindowStateAnimator{cd519d SystemUIOverlayWindow}:
+    mForceSeamlesslyRotate=false seamlesslyRotate: pending=null
+    isOnScreen=false
+    isVisible=false
+    keepClearAreas: restricted=[], unrestricted=[]
+    mPrepareSyncSeqId=0
+  Window #6 Window{ebd29c u0 TopCarSystemBar}:
+    mDisplayId=0 rootTaskId=1 mSession=Session{c3fccf1 2234:u0a10124} mClient=android.os.BinderProxy@ff782e9
+    mOwnerUid=10124 showForAllUsers=true package=com.android.systemui appop=NONE
+    mAttrs={(0,0)(fillx95) gr=TOP CENTER_VERTICAL sim={adjust=pan} layoutInDisplayCutoutMode=always ty=STATUS_BAR_ADDITIONAL fmt=TRANSLUCENT
+      fl=NOT_FOCUSABLE NOT_TOUCH_MODAL WATCH_OUTSIDE_TOUCH SPLIT_TOUCH HARDWARE_ACCELERATED
+      pfl=FIT_INSETS_CONTROLLED
+      bhv=DEFAULT
+      providedInsets:
+        InsetsFrameProvider: {id=#bdc40000, index=0, type=statusBars, source=FRAME, flags=[]}
+        InsetsFrameProvider: {id=#bdc40005, index=0, type=mandatorySystemGestures, source=FRAME, flags=[]}}
+    Requested w=2560 h=95 mLayoutSeq=546
+    mHasSurface=true isReadyForDisplay()=true mWindowRemovalAllowed=false
+    ContainerAnimator:
+      mLeash=Surface(name=Surface(name=ebd29c TopCarSystemBar)/@0x296a02b - animation-leash of insets_animation)/@0xf3160af mAnimationType=insets_animation
+      Animation: com.android.server.wm.InsetsSourceProvider$ControlAdapter@40445
+        ControlAdapter mCapturedLeash=Surface(name=Surface(name=ebd29c TopCarSystemBar)/@0x296a02b - animation-leash of insets_animation)/@0xf3160af
+    WindowStateAnimator{7d8f874 TopCarSystemBar}:
+      Surface: shown=true    mForceSeamlesslyRotate=false seamlesslyRotate: pending=null
+    isOnScreen=true
+    isVisible=true
+    keepClearAreas: restricted=[], unrestricted=[]
+    mPrepareSyncSeqId=0
+  Window #7 Window{15ea7ec u10 com.android.car.rotary}:
+    mDisplayId=0 rootTaskId=1 mSession=Session{be96254 2547:u10a1000} mClient=android.os.BinderProxy@c818a9f
+    mOwnerUid=1001000 showForAllUsers=false package=com.android.car.rotary appop=SYSTEM_ALERT_WINDOW
+    mAttrs={(0,0)(0x0) gr=TOP RIGHT CENTER sim={adjust=pan} ty=APPLICATION_OVERLAY fmt=TRANSPARENT
+      fl=NOT_FOCUSABLE WATCH_OUTSIDE_TOUCH HARDWARE_ACCELERATED
+      pfl=TRUSTED_OVERLAY INSET_PARENT_FRAME_BY_IME
+      bhv=DEFAULT
+      fitTypes=STATUS_BARS NAVIGATION_BARS CAPTION_BAR}
+    Requested w=0 h=0 mLayoutSeq=546
+    mHasSurface=true isReadyForDisplay()=true mWindowRemovalAllowed=false
+    WindowStateAnimator{4f82847 }:
+      Surface: shown=true    mForceSeamlesslyRotate=false seamlesslyRotate: pending=null
+    isOnScreen=true
+    isVisible=true
+    keepClearAreas: restricted=[], unrestricted=[]
+    mPrepareSyncSeqId=0
+  Window #8 Window{4532ee5 u0 ShellDropTarget}:
+    mDisplayId=0 rootTaskId=1 mSession=Session{c3fccf1 2234:u0a10124} mClient=android.os.BinderProxy@6d25ddc
+    mOwnerUid=10124 showForAllUsers=true package=com.android.systemui appop=SYSTEM_ALERT_WINDOW
+    mAttrs={(0,0)(fillxfill) sim={adjust=pan} layoutInDisplayCutoutMode=always ty=APPLICATION_OVERLAY fmt=TRANSLUCENT
+      fl=NOT_FOCUSABLE HARDWARE_ACCELERATED
+      pfl=SHOW_FOR_ALL_USERS NO_MOVE_ANIMATION FIT_INSETS_CONTROLLED INTERCEPT_GLOBAL_DRAG_AND_DROP
+      bhv=DEFAULT}
+    Requested w=2560 h=1600 mLayoutSeq=8
+    mHasSurface=false isReadyForDisplay()=false mWindowRemovalAllowed=false
+    WindowStateAnimator{ca7b786 ShellDropTarget}:
+      mShownAlpha=0.0 mAlpha=1.0 mLastAlpha=0.0
+    mForceSeamlesslyRotate=false seamlesslyRotate: pending=null
+    isOnScreen=false
+    isVisible=false
+    keepClearAreas: restricted=[], unrestricted=[]
+    mPrepareSyncSeqId=0
+  Window #9 Window{61b58c8 u10 InputMethod}:
+    mDisplayId=0 rootTaskId=1 mSession=Session{4aca5f1 2727:u10a10081} mClient=android.os.BinderProxy@849456b
+    mOwnerUid=1010081 showForAllUsers=false package=com.android.inputmethod.latin appop=NONE
+    mAttrs={(0,0)(wrapxwrap) gr=BOTTOM CENTER_VERTICAL sim={adjust=pan forwardNavigation} ty=INPUT_METHOD fmt=TRANSPARENT wanim=0x1030056 receive insets ignoring z-order
+      fl=NOT_FOCUSABLE LAYOUT_IN_SCREEN SPLIT_TOUCH HARDWARE_ACCELERATED DRAWS_SYSTEM_BAR_BACKGROUNDS
+      pfl=FIT_INSETS_CONTROLLED
+      bhv=DEFAULT
+      fitTypes=STATUS_BARS NAVIGATION_BARS
+      fitSides=LEFT TOP RIGHT}
+    Requested w=0 h=0 mLayoutSeq=72
+    mIsImWindow=true mIsWallpaper=false mIsFloatingLayer=true
+    mHasSurface=false isReadyForDisplay()=false mWindowRemovalAllowed=false
+    ContainerAnimator:
+      mLeash=Surface(name=Surface(name=61b58c8 InputMethod)/@0xeefe9d - animation-leash of insets_animation)/@0x8266889 mAnimationType=insets_animation
+      Animation: com.android.server.wm.InsetsSourceProvider$ControlAdapter@d61079a
+        ControlAdapter mCapturedLeash=Surface(name=Surface(name=61b58c8 InputMethod)/@0xeefe9d - animation-leash of insets_animation)/@0x8266889
+    WindowStateAnimator{3f11061 InputMethod}:
+      mShownAlpha=0.0 mAlpha=1.0 mLastAlpha=0.0
+    mForceSeamlesslyRotate=false seamlesslyRotate: pending=null
+    isOnScreen=false
+    isVisible=false
+    keepClearAreas: restricted=[], unrestricted=[]
+    mPrepareSyncSeqId=0
+  Window #10 Window{fc6296b u10 com.android.car.developeroptions/com.android.car.developeroptions.CarDevelopmentSettingsDashboardActivity}:
+    mDisplayId=0 rootTaskId=1000113 mSession=Session{5003edc 20136:u10a1000} mClient=android.os.BinderProxy@5fe36ba
+    mOwnerUid=1001000 showForAllUsers=false package=com.android.car.developeroptions appop=NONE
+    mAttrs={(0,0)(fillxfill) sim={adjust=resize forwardNavigation} layoutInDisplayCutoutMode=always ty=BASE_APPLICATION wanim=0x10302fc
+      fl=LAYOUT_IN_SCREEN LAYOUT_INSET_DECOR SPLIT_TOUCH HARDWARE_ACCELERATED DRAWS_SYSTEM_BAR_BACKGROUNDS
+      pfl=NO_MOVE_ANIMATION FORCE_DRAW_STATUS_BAR_BACKGROUND HIDE_NON_SYSTEM_OVERLAY_WINDOWS FIT_INSETS_CONTROLLED
+      bhv=DEFAULT
+      fitSides=}
+    Requested w=2560 h=1600 mLayoutSeq=546
+    mHasSurface=true isReadyForDisplay()=true mWindowRemovalAllowed=false
+    WindowStateAnimator{4537242 com.android.car.developeroptions/com.android.car.developeroptions.CarDevelopmentSettingsDashboardActivity}:
+      Surface: shown=true    mForceSeamlesslyRotate=false seamlesslyRotate: pending=null
+    isOnScreen=true
+    isVisible=true
+    keepClearAreas: restricted=[], unrestricted=[]
+    mPrepareSyncSeqId=0
+  Window #11 Window{2366262 u10 com.android.car.settings/com.android.car.settings.Settings_Launcher_Homepage}:
+    mDisplayId=0 rootTaskId=1000113 mSession=Session{df35557 20081:u10a1000} mClient=android.os.BinderProxy@d0e6d2d
+    mOwnerUid=1001000 showForAllUsers=false package=com.android.car.settings appop=NONE
+    mAttrs={(0,0)(fillxfill) sim={adjust=pan} layoutInDisplayCutoutMode=always ty=BASE_APPLICATION wanim=0x10302fc
+      fl=LAYOUT_IN_SCREEN LAYOUT_INSET_DECOR SPLIT_TOUCH HARDWARE_ACCELERATED DRAWS_SYSTEM_BAR_BACKGROUNDS
+      pfl=NO_MOVE_ANIMATION FORCE_DRAW_STATUS_BAR_BACKGROUND FIT_INSETS_CONTROLLED
+      bhv=DEFAULT
+      fitSides=}
+    Requested w=2560 h=1600 mLayoutSeq=512
+    mHasSurface=false isReadyForDisplay()=false mWindowRemovalAllowed=false
+    WindowStateAnimator{8f8508d com.android.car.settings/com.android.car.settings.Settings_Launcher_Homepage}:
+    mForceSeamlesslyRotate=false seamlesslyRotate: pending=null
+    isOnScreen=false
+    isVisible=false
+    keepClearAreas: restricted=[], unrestricted=[]
+    mPrepareSyncSeqId=0
+  Window #12 Window{1491d86 u10 com.android.car.carlauncher/com.android.car.carlauncher.AppGridActivity}:
+    mDisplayId=0 rootTaskId=1000112 mSession=Session{3dd1cfa 2631:u10a10049} mClient=android.os.BinderProxy@6404e61
+    mOwnerUid=1010049 showForAllUsers=false package=com.android.car.carlauncher appop=NONE
+    mAttrs={(0,0)(fillxfill) sim={adjust=pan} layoutInDisplayCutoutMode=always ty=BASE_APPLICATION wanim=0x10302fc
+      fl=LAYOUT_IN_SCREEN LAYOUT_INSET_DECOR SPLIT_TOUCH HARDWARE_ACCELERATED DRAWS_SYSTEM_BAR_BACKGROUNDS
+      pfl=NO_MOVE_ANIMATION FORCE_DRAW_STATUS_BAR_BACKGROUND FIT_INSETS_CONTROLLED
+      bhv=DEFAULT
+      fitSides=}
+    Requested w=2560 h=1600 mLayoutSeq=499
+    mHasSurface=false isReadyForDisplay()=false mWindowRemovalAllowed=false
+    WindowStateAnimator{1abaae5 com.android.car.carlauncher/com.android.car.carlauncher.AppGridActivity}:
+    mForceSeamlesslyRotate=false seamlesslyRotate: pending=null
+    isOnScreen=false
+    isVisible=false
+    keepClearAreas: restricted=[], unrestricted=[]
+    mPrepareSyncSeqId=0
+  Window #13 Window{de141b4 u10 com.android.car.carlauncher/com.android.car.carlauncher.CarLauncher}:
+    mDisplayId=0 rootTaskId=1 mSession=Session{3dd1cfa 2631:u10a10049} mClient=android.os.BinderProxy@bace87
+    mOwnerUid=1010049 showForAllUsers=false package=com.android.car.carlauncher appop=NONE
+    mAttrs={(0,0)(fillxfill) sim={adjust=pan forwardNavigation} layoutInDisplayCutoutMode=always ty=BASE_APPLICATION fmt=TRANSLUCENT wanim=0x10302fc
+      fl=NOT_TOUCH_MODAL LAYOUT_IN_SCREEN LAYOUT_INSET_DECOR SPLIT_TOUCH HARDWARE_ACCELERATED DRAWS_SYSTEM_BAR_BACKGROUNDS
+      pfl=NO_MOVE_ANIMATION FORCE_DRAW_STATUS_BAR_BACKGROUND FIT_INSETS_CONTROLLED TRUSTED_OVERLAY
+      bhv=DEFAULT
+      fitSides=}
+    Requested w=2560 h=1600 mLayoutSeq=464
+    mHasSurface=false isReadyForDisplay()=false mWindowRemovalAllowed=false
+    WindowStateAnimator{647b9ba com.android.car.carlauncher/com.android.car.carlauncher.CarLauncher}:
+    mForceSeamlesslyRotate=false seamlesslyRotate: pending=null
+    isOnScreen=false
+    isVisible=false
+    keepClearAreas: restricted=[], unrestricted=[]
+    mPrepareSyncSeqId=0
+  Window #14 Window{c9398ea u10 com.damiao.aaosmaps/com.damiao.aaosmaps.map.MapActivity}:
+    mDisplayId=0 rootTaskId=1000111 mSession=Session{9841ab7 3269:u10a1000} mClient=android.os.BinderProxy@d2bc8d5
+    mOwnerUid=1001000 showForAllUsers=false package=com.damiao.aaosmaps appop=NONE
+    mAttrs={(0,0)(fillxfill) sim={adjust=pan} ty=BASE_APPLICATION fmt=TRANSLUCENT wanim=0x1030308
+      fl=LAYOUT_IN_SCREEN LAYOUT_INSET_DECOR SPLIT_TOUCH HARDWARE_ACCELERATED DRAWS_SYSTEM_BAR_BACKGROUNDS
+      pfl=NO_MOVE_ANIMATION FORCE_DRAW_STATUS_BAR_BACKGROUND FIT_INSETS_CONTROLLED
+      bhv=DEFAULT
+      fitSides=}
+    Requested w=2035 h=1385 mLayoutSeq=464
+    mHasSurface=false isReadyForDisplay()=false mWindowRemovalAllowed=false
+    WindowStateAnimator{8b527c8 com.damiao.aaosmaps/com.damiao.aaosmaps.map.MapActivity}:
+    mForceSeamlesslyRotate=false seamlesslyRotate: pending=null
+    isOnScreen=false
+    isVisible=false
+    keepClearAreas: restricted=[], unrestricted=[]
+    mPrepareSyncSeqId=0
+  Window #15 Window{365a9af u10 com.damiao.aaosmaps/com.damiao.aaosmaps.MainActivity}:
+    mDisplayId=0 rootTaskId=1000111 mSession=Session{9841ab7 3269:u10a1000} mClient=android.os.BinderProxy@7ce3d8e
+    mOwnerUid=1001000 showForAllUsers=false package=com.damiao.aaosmaps appop=NONE
+    mAttrs={(0,0)(fillxfill) sim={adjust=pan forwardNavigation} ty=BASE_APPLICATION wanim=0x1030308
+      fl=LAYOUT_IN_SCREEN LAYOUT_INSET_DECOR SPLIT_TOUCH HARDWARE_ACCELERATED DRAWS_SYSTEM_BAR_BACKGROUNDS
+      pfl=NO_MOVE_ANIMATION FORCE_DRAW_STATUS_BAR_BACKGROUND FIT_INSETS_CONTROLLED
+      bhv=DEFAULT
+      fitSides=}
+    Requested w=2035 h=1385 mLayoutSeq=145
+    mHasSurface=false isReadyForDisplay()=false mWindowRemovalAllowed=false
+    WindowStateAnimator{6fcf06b com.damiao.aaosmaps/com.damiao.aaosmaps.MainActivity}:
+    mForceSeamlesslyRotate=false seamlesslyRotate: pending=null
+    isOnScreen=false
+    isVisible=false
+    keepClearAreas: restricted=[], unrestricted=[]
+    mPrepareSyncSeqId=0
+
+  Hiding System Alert Windows:
+  #0 Window{fc6296b u10 com.android.car.developeroptions/com.android.car.developeroptions.CarDevelopmentSettingsDashboardActivity}
+
+  mGlobalConfiguration={1.0 ?mcc0mnc [en_US] ldltr sw1280dp w2048dp h1108dp 200dpi xlrg long hdr widecg land car finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 2560, 1600) mAppBounds=Rect(0, 0 - 2560, 1480) mMaxBounds=Rect(0, 0 - 2560, 1600) mDisplayRotation=ROTATION_270 mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_270} as.2 s.44 fontWeightAdjustment=0}
+  mHasPermanentDpad=false
+  mTopFocusedDisplayId=0
+  imeLayeringTarget in display# 0 Window{fc6296b u10 com.android.car.developeroptions/com.android.car.developeroptions.CarDevelopmentSettingsDashboardActivity}
+  imeInputTarget in display# 0 Window{fc6296b u10 com.android.car.developeroptions/com.android.car.developeroptions.CarDevelopmentSettingsDashboardActivity}
+  imeControlTarget in display# 0 Window{fc6296b u10 com.android.car.developeroptions/com.android.car.developeroptions.CarDevelopmentSettingsDashboardActivity}
+  Minimum task size of display#0 220  mBlurEnabled=true
+  mLastDisplayFreezeDuration=0 due to Window{e45dee8 u0 SystemUIOverlayWindow}
+ mHighResSnapshotScale=1.0
+ mSnapshotEnabled=true
+ SnapshotCache Task
+   Entry token=1000112
+     topApp=ActivityRecord{78fb614 u10 com.android.car.carlauncher/.AppGridActivity t1000112}
+     snapshot=TaskSnapshot{ mId=1756008080998 mCaptureTime=45397184757378 mTopActivityComponent=com.android.car.carlauncher/.AppGridActivity mSnapshot=android.hardware.HardwareBuffer@dbd58cb (2560x1600) mColorSpace=Display P3 (id=7, model=RGB) mOrientation=2 mRotation=3 mTaskSize=Point(2560, 1600) mContentInsets=[0,95][0,120] mLetterboxInsets=[0,0][0,0] mIsLowResolution=false mIsRealSnapshot=true mWindowingMode=1 mAppearance=0 mIsTranslucent=false mHasImeSurface=false
+   Entry token=1000111
+     topApp=ActivityRecord{806698c u10 com.damiao.aaosmaps/.map.MapActivity t1000111}
+     snapshot=TaskSnapshot{ mId=1756008076326 mCaptureTime=45392506482596 mTopActivityComponent=com.damiao.aaosmaps/.map.MapActivity mSnapshot=android.hardware.HardwareBuffer@2aed8a8 (2035x1385) mColorSpace=Display P3 (id=7, model=RGB) mOrientation=2 mRotation=3 mTaskSize=Point(2035, 1385) mContentInsets=[0,0][0,0] mLetterboxInsets=[0,0][0,0] mIsLowResolution=false mIsRealSnapshot=true mWindowingMode=6 mAppearance=0 mIsTranslucent=true mHasImeSurface=false
+ mHighResSnapshotScale=0.6
+ mSnapshotEnabled=false
+ SnapshotCache Activity
+AccessibilityController:
+  No magnification displays
+  1 windows for accessibility observer(s):
+    WindowsForAccessibilityObserver{mDisplayId=0, mInitialized=true}
+  AccessibilityWindowsPopulator
+    mWindowsNotificationEnabled: true
+    4 visible windows: [37374d2 BottomCarSystemBar, frame=[Rect(1480, 0 - 1600, 2560)], touchableRegion=SkRegion((1480,0,1600,2560)), scaleFactor=1.0, transform=Matrix{[0.0, -1.0, 2560.0][1.0, 0.0, -1480.0][0.0, 0.0, 1.0]}, windowToken=android.os.BinderProxy@6dd1407, displayId=0, isClone=false, contentSize=2560x120, alpha=1.0, 70fef2c HeadsUpNotification, frame=[Rect(0, 0 - 580, 2560)], touchableRegion=SkRegion((20,206,178,2354)), scaleFactor=1.0, transform=Matrix{[0.0, -1.0, 2560.0][1.0, 0.0, 0.0][0.0, 0.0, 1.0]}, windowToken=android.os.BinderProxy@b57f583, displayId=0, isClone=false, contentSize=2560x580, alpha=1.0, ebd29c TopCarSystemBar, frame=[Rect(0, 0 - 95, 2560)], touchableRegion=SkRegion((0,0,95,2560)), scaleFactor=1.0, transform=Matrix{[0.0, -1.0, 2560.0][1.0, 0.0, 0.0][0.0, 0.0, 1.0]}, windowToken=android.os.BinderProxy@ff782e9, displayId=0, isClone=false, contentSize=2560x95, alpha=1.0, fc6296b com.android.car.developeroptions/com.android.car.developeroptions.CarDevelopmentSettingsDashboardActivity, frame=[Rect(0, 0 - 1600, 2560)], touchableRegion=SkRegion((0,0,1600,2560)), scaleFactor=1.0, transform=Matrix{[0.0, -1.0, 2560.0][1.0, 0.0, 0.0][0.0, 0.0, 1.0]}, windowToken=android.os.BinderProxy@5fe36ba, displayId=0, isClone=false, contentSize=2560x1600, alpha=1.0]
+    1 display info(s):
+displayId=0, mLogicalSize=2560x1600, mTransform=Matrix{[0.0, -1.0, 2560.0][1.0, 0.0, 0.0][0.0, 0.0, 1.0]}
+    1 window handles on display(s):
+  Display #0: [37374d2 BottomCarSystemBar, frame=[Rect(1480, 0 - 1600, 2560)], touchableRegion=SkRegion((1480,0,1600,2560)), scaleFactor=1.0, transform=Matrix{[0.0, -1.0, 2560.0][1.0, 0.0, -1480.0][0.0, 0.0, 1.0]}, windowToken=android.os.BinderProxy@6dd1407, displayId=0, isClone=false, contentSize=2560x120, alpha=1.0, 70fef2c HeadsUpNotification, frame=[Rect(0, 0 - 580, 2560)], touchableRegion=SkRegion((20,206,178,2354)), scaleFactor=1.0, transform=Matrix{[0.0, -1.0, 2560.0][1.0, 0.0, 0.0][0.0, 0.0, 1.0]}, windowToken=android.os.BinderProxy@b57f583, displayId=0, isClone=false, contentSize=2560x580, alpha=1.0, ebd29c TopCarSystemBar, frame=[Rect(0, 0 - 95, 2560)], touchableRegion=SkRegion((0,0,95,2560)), scaleFactor=1.0, transform=Matrix{[0.0, -1.0, 2560.0][1.0, 0.0, 0.0][0.0, 0.0, 1.0]}, windowToken=android.os.BinderProxy@ff782e9, displayId=0, isClone=false, contentSize=2560x95, alpha=1.0, fc6296b com.android.car.developeroptions/com.android.car.developeroptions.CarDevelopmentSettingsDashboardActivity, frame=[Rect(0, 0 - 1600, 2560)], touchableRegion=SkRegion((0,0,1600,2560)), scaleFactor=1.0, transform=Matrix{[0.0, -1.0, 2560.0][1.0, 0.0, 0.0][0.0, 0.0, 1.0]}, windowToken=android.os.BinderProxy@5fe36ba, displayId=0, isClone=false, contentSize=2560x1600, alpha=1.0]
+    No magnification spec matrixs
+    No current magnification specs
+    No previous magnification specs
+WINDOW MANAGER TRACE (dumpsys window trace)
+Status: Disabled
+Log level: 1
+Buffer size: 10485760 bytes
+Buffer usage: 0 bytes
+Elements in the buffer: 0
+WINDOW MANAGER LOGGING (dumpsys window logging)
+ProtoLog status: Disabled
+Enabled log groups: 
+  Proto: TEST_GROUP WM_DEBUG_ADD_REMOVE WM_DEBUG_ANIM WM_DEBUG_APP_TRANSITIONS WM_DEBUG_APP_TRANSITIONS_ANIM WM_DEBUG_BACK_PREVIEW WM_DEBUG_BOOT WM_DEBUG_CONFIGURATION WM_DEBUG_CONTAINERS WM_DEBUG_CONTENT_RECORDING WM_DEBUG_DIMMER WM_DEBUG_DRAW WM_DEBUG_DREAM WM_DEBUG_FOCUS WM_DEBUG_FOCUS_LIGHT WM_DEBUG_IME WM_DEBUG_IMMERSIVE WM_DEBUG_KEEP_SCREEN_ON WM_DEBUG_LOCKTASK WM_DEBUG_ORIENTATION WM_DEBUG_RECENTS_ANIMATIONS WM_DEBUG_REMOTE_ANIMATIONS WM_DEBUG_RESIZE WM_DEBUG_SCREEN_ON WM_DEBUG_STARTING_WINDOW WM_DEBUG_STATES WM_DEBUG_SWITCH WM_DEBUG_SYNC_ENGINE WM_DEBUG_TASKS WM_DEBUG_TPL WM_DEBUG_WALLPAPER WM_DEBUG_WINDOW_INSETS WM_DEBUG_WINDOW_MOVEMENT WM_DEBUG_WINDOW_ORGANIZER WM_DEBUG_WINDOW_TRANSITIONS WM_DEBUG_WINDOW_TRANSITIONS_MIN WM_ERROR WM_SHOW_SURFACE_ALLOC WM_SHOW_TRANSACTIONS
+  Logcat: WM_DEBUG_BACK_PREVIEW WM_DEBUG_CONTENT_RECORDING WM_DEBUG_DREAM WM_DEBUG_WINDOW_TRANSITIONS_MIN WM_ERROR
+Logging definitions loaded: 0
+WINDOW MANAGER HIGH REFRESH RATE BLACKLIST (dumpsys window refresh)
+High Refresh Rate Denylist
+  Packages:
+INSTALLED PACKAGES HAVING APP-SPECIFIC CONFIGURATIONS
+Current user ID : 10
+WINDOW MANAGER CONSTANTS (dumpsys window constants):
+  system_gesture_exclusion_log_debounce_millis=0
+  system_gesture_exclusion_limit_dp=200
+  system_gestures_excluded_by_pre_q_sticky_immersive=false
+
+SystemPerformanceHinter:
+  Active sessions (0):
+TrustedPresentationListenerController:
+  Active unique listeners (0):

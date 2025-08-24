@@ -12,3 +12,86 @@
 功能描述：
 再添加一个新的Tab，这个tab用来展示两个命令的数据分析，分别是 adb shell ip route show & adb shell ip rule show， 其中ip ruote show 的命令执行由 ip rule show的执行结果动态决定，我觉个例子，假设 ip rule show的执行结果的某一行是10000:  from all fwmark 0xc0000/0xd0000 lookup 99 ，lookup之后的字符串输出99就表示一个route表名，此时就要继续执行ip route show table + 刚才的table名，然后在得到输出后，请用UI展示结果并基于专业知识分析对应的路由信息的含义
 
+功能描述
+新增IP Route Tab很棒，有几个地方需要调整，
+1:列表内容比较多，请加一个滚动条帮助快速拖动
+2:请把rule条目和route table条目分成水平的两个Tab展示各自的列表，若展示空间受限，请考虑重新调整下条目的UI元素布局
+3:rule条目上有Table的标签展示，请加一个对Table标签的点击事件，快速跳转到对应的Route table条目
+
+功能描述：
+帮我新增一个tab，专门用来对Android bugreport文件进行分析，目前先分析以下三类重要数据：
+1.CPU info，请根据你对cpuinfo的理解展示重要数据，并基于其中的重要数据提示用户当前CPU状态是否异常
+2.Memory info，请根据你对内存的理解展示重要数据，并基于其中的重要数据提示用户当前CPU状态是否异常
+3.因为Bugreport里会包含很多dump数据，所以请筛选出工具目前已经实现的和网络相关的dump数据，然后直接复用已经实现的分析代码，对这类网络dump数据进行分析
+
+调整一下dump activity的页面显示逻辑，主要从以下这样的Dump输出模板中获取信息，分三级，Display->Task->Activity这样
+ACTIVITY MANAGER ACTIVITIES (dumpsys activity activities)
+Display #0 (activities from top to bottom):
+	//这里会显示Task id,Task 类型， Task Affinity(10010000:com.damiao.aaosmaps) Task是否可见，TaskMode=multi-window
+  * Task{a6554d9 #1000105 type=standard A=1001000:com.damiao.aaosmaps U=10 visible=true visibleRequested=true mode=multi-window translucent=false sz=1}
+  //以及Task显示的屏幕区域边界
+    mBounds=Rect(505, 95 - 2540, 1480)
+    isSleeping=false
+    //这里是Task对应的top ActivityRecord信息
+    topResumedActivity=ActivityRecord{fc86d7f u10 com.damiao.aaosmaps/.map.MapActivity t1000105}
+        Hist  #0: ActivityRecord{fc86d7f u10 com.damiao.aaosmaps/.map.MapActivity t1000105}
+      Intent { act=android.intent.action.MAIN flg=0x10000000 pkg=com.damiao.aaosmaps cmp=com.damiao.aaosmaps/.map.MapActivity }
+      ProcessRecord{1176638 3261:com.damiao.aaosmaps/u10s1000}
+
+  * Task{51680cd #1 type=home U=0 visible=true visibleRequested=true mode=fullscreen translucent=false sz=1}
+    * Task{491e6c3 #1000104 type=home A=1010049:com.android.car.carlauncher U=10 rootTaskId=1 visible=true visibleRequested=true mode=fullscreen translucent=false sz=1}
+      mLastNonFullscreenBounds=Rect(1023, 330 - 1538, 1245)
+      isSleeping=false
+      topResumedActivity=ActivityRecord{5eb0a79 u10 com.android.car.carlauncher/.CarLauncher t1000104}
+          Hist  #0: ActivityRecord{5eb0a79 u10 com.android.car.carlauncher/.CarLauncher t1000104}
+        Intent { act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10000100 cmp=com.android.car.carlauncher/.CarLauncher (has extras) }
+        ProcessRecord{b842a7f 2644:com.android.car.carlauncher/u10a49}
+
+  * Task{c3f4fe0 #1000109 type=standard A=1010055:com.android.car.media U=10 visible=false visibleRequested=false mode=fullscreen translucent=true sz=1}
+    mLastNonFullscreenBounds=Rect(1023, 330 - 1538, 1245)
+    isSleeping=false
+        Hist  #0: ActivityRecord{a650ea4 u10 com.android.car.radio/.RadioActivity t1000109}
+      Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x4000000 pkg=com.android.car.radio cmp=com.android.car.radio/.RadioActivity (has extras) }
+      ProcessRecord{321a9e5 3483:com.android.car.radio/u10a56}
+
+  * Task{ab9a6cf #1000107 type=standard A=1010058:com.android.car.dialer U=10 visible=false visibleRequested=false mode=fullscreen translucent=true sz=1}
+    mLastNonFullscreenBounds=Rect(1023, 330 - 1538, 1245)
+    isSleeping=false
+        Hist  #0: ActivityRecord{5580765 u10 com.android.car.dialer/.ui.TelecomActivity t1000107}
+      Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 pkg=com.android.car.dialer cmp=com.android.car.dialer/.ui.TelecomActivity (has extras) }
+      ProcessRecord{fdb4813 3777:com.android.car.dialer/u10a58}
+
+  Resumed activities in task display areas (from top to bottom):
+    Resumed: ActivityRecord{fc86d7f u10 com.damiao.aaosmaps/.map.MapActivity t1000105}
+
+  ResumedActivity: ActivityRecord{fc86d7f u10 com.damiao.aaosmaps/.map.MapActivity t1000105}
+  UI重构一下，Display是第一级，显示number就好，点击Display展开显示所有Task，Task条目要显示上面注释里加的各种关键信息，然后点击Task打开Activity，展示所有ActivityRecord的完整信息，这里顺便加个一键展开的button，点击可以一次性展开所有Task & Activity，不用一个个点了，也可以一次性缩起来
+
+  功能描述：
+  dump分析页面再加一个对window的分析，主要呈现如下几个内容，
+  1.当前WMS管理的window state信息汇总，信息如下所示：
+  WINDOW MANAGER WINDOWS (dumpsys window windows)
+  Window #0 Window{5b26b1b u0 ScreenDecorOverlayBottom}:
+    mDisplayId=0 rootTaskId=1 mSession=Session{c3fccf1 2234:u0a10124} mClient=android.os.BinderProxy@7afa11e
+    mOwnerUid=10124 showForAllUsers=true package=com.android.systemui appop=NONE
+    mAttrs={(0,0)(wrapxfill) gr=LEFT CENTER_HORIZONTAL sim={adjust=pan} layoutInDisplayCutoutMode=always ty=NAVIGATION_BAR_PANEL fmt=TRANSLUCENT
+      fl=NOT_FOCUSABLE NOT_TOUCHABLE NOT_TOUCH_MODAL LAYOUT_IN_SCREEN SPLIT_TOUCH FLAG_SLIPPERY
+      pfl=SHOW_FOR_ALL_USERS NO_MOVE_ANIMATION IS_ROUNDED_CORNERS_OVERLAY COLOR_SPACE_AGNOSTIC FIT_INSETS_CONTROLLED TRUSTED_OVERLAY
+      vsysui=LAYOUT_STABLE
+      bhv=DEFAULT}
+    Requested w=0 h=1600 mLayoutSeq=18
+    mHasSurface=false isReadyForDisplay()=false mWindowRemovalAllowed=false
+    WindowStateAnimator{48315e ScreenDecorOverlayBottom}:
+      mShownAlpha=0.0 mAlpha=1.0 mLastAlpha=0.0
+    mForceSeamlesslyRotate=true seamlesslyRotate: pending=null
+    isOnScreen=false
+    isVisible=false
+    keepClearAreas: restricted=[], unrestricted=[]
+    mPrepareSyncSeqId=0
+ 把上面这样的Window信息按照顺序每个都显示成一个可点击的button，展开后显示内部的详细信息，除了Window的名称和序号外，还要展示package mDisplayId rootTaskId isVisible isOnScreen 等字段
+ 2.第二个是当前正处在前台显示的Window信息展示
+   mCurrentFocus=Window{fc6296b u10 com.android.car.developeroptions/com.android.car.developeroptions.CarDevelopmentSettingsDashboardActivity}
+  mFocusedApp=ActivityRecord{89ab83c u10 com.android.car.developeroptions/.CarDevelopmentSettingsDashboardActivity t1000113}
+  mCurrentFocus & mFocusedApp要着重呈现出来
+
+  

@@ -90,11 +90,20 @@ fun NetworkStackTab(
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Text(
-                text = "Network Stack Analysis",
-                fontSize = 24.sp,
-                fontWeight = FontWeight.Bold
-            )
+            Column {
+                Text(
+                    text = "Network Stack Real-time Analysis", 
+                    fontSize = 24.sp,
+                    fontWeight = FontWeight.Bold
+                )
+                
+                Text(
+                    text = "Real-time network stack configuration and status analysis",
+                    fontSize = 14.sp,
+                    color = Color.Gray,
+                    modifier = Modifier.padding(top = 4.dp)
+                )
+            }
             
             Button(
                 onClick = {
